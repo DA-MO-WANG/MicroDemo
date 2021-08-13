@@ -11,6 +11,14 @@ public class MyFiter implements Filter {
         //Filter.super.init(filterConfig);
     }
 
+    /**
+     * 显然filter相当于在web方法上下做了一次切割，相当于环绕通知
+     * @param servletRequest
+     * @param servletResponse
+     * @param filterChain
+     * @throws IOException
+     * @throws ServletException
+     */
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletResponse response = (HttpServletResponse)servletResponse;
