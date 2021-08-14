@@ -2,6 +2,14 @@ package com.example.proxypattern.pattern;
 
 import lombok.extern.java.Log;
 
+/**
+ * 代理模式
+ * 第三方功能
+ * 原有业务层、抽象业务层、代理业务层
+ * 代理业务层维护了两个东西：原有业务层、第三方
+ * ---》在代理中，包装下原有第三方
+ * ---》在业务方法上，书写综合后的逻辑
+ */
 public class ProxySearcher implements Searcher{
     private RealSearcher searcher = new RealSearcher();
     private AccessValidator validator;
