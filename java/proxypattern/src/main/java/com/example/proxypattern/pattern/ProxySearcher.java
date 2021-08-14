@@ -10,7 +10,7 @@ public class ProxySearcher implements Searcher{
     public String doSearch(String userId, String keyword) {
         if (validate(userId)) {
             String result = searcher.doSearch(userId,keyword);
-            logger.log(userId);
+            log(userId);
             return result;
         }else {
             return null;
