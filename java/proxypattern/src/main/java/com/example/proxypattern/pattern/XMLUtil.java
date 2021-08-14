@@ -17,7 +17,7 @@ public class XMLUtil {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc = builder.parse(new File("config.xml"));
+            doc = builder.parse(new File("/Users/richheart/IdeaProjects/microdemo/java/proxypattern/src/main/resources/config.xml"));
 
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();
