@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-    <className>/Users/richheart/IdeaProjects/microdemo/java/proxypattern/src/main/java/com/example/proxypattern/pattern/ProxySearcher</className>
+    <className>com.example.proxypattern.pattern.ProxySearcher</className>
 </config>

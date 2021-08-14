@@ -8,7 +8,7 @@ public class ProxySearcher implements Searcher{
     private Logger logger;
 
     public String doSearch(String userId, String keyword) {
-        if (validator.validate(userId)) {
+        if (validate(userId)) {
             String result = searcher.doSearch(userId,keyword);
             logger.log(userId);
             return result;
