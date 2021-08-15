@@ -26,6 +26,7 @@ public class DaoLogHandler implements InvocationHandler {
         afterInvoke();
         return null;
     }
+    //具体要添加的第三方非业务功能
     public void beforeInvoke() {
         calendar = new GregorianCalendar();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
