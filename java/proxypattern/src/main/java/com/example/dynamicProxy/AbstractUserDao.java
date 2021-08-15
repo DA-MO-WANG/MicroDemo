@@ -1,5 +1,5 @@
 package com.example.dynamicProxy;
 
 public interface AbstractUserDao {
-    public Boolean findUserBy(String userId);
+    public Boolean findUserById(String userId);
 }

@@ -1,8 +1,8 @@
 package com.example.dynamicProxy;
 
-public class DocumentDao implements AbstractUserDao{
+public class DocumentDao implements AbstractDocumentDao{
     @Override
-    public Boolean findUserBy(String documentId) {
+    public Boolean deleteDocumentById(String documentId) {
         if (documentId.equalsIgnoreCase("D001")) {
             System.out.println("删除ID为" + documentId + "的文档信息成功！");
             return true;
