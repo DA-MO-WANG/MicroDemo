@@ -15,7 +15,7 @@ public class LoggingAspect {
         System.err.println("before: doaccesscheck");
     }
 
-    @Around("execution(public * com.example.aopdemo.service.MailService.*(..)))")
+    @Around("execution(public * com.example.aopdemo.service.MailService.*(..))")
     public Object doLogging(ProceedingJoinPoint pjp) throws Throwable {
         System.err.println("around: start " + pjp.getSignature());
         Object retVal = pjp.proceed();
