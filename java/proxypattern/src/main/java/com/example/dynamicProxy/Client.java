@@ -11,7 +11,7 @@ import java.lang.reflect.Proxy;
  *
  * InvocationHandler 调用逻辑接口形式，具体的实现要在定义的业务处理类中实现，这个业务处理类可以包容各种个样的业务--靠构造方法传入Object实现
  * invoke方法是对调用的统一处理，方法参数：被代理的抽象业务类、被代理的方法，被代理方法的参数----第一个需要自己传入，其他不用管
- * 
+ *
  *
  */
 public class Client {
