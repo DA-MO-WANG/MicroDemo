@@ -1,2 +1,11 @@
-package com.example.aopdemo.config;public class AppConfig {
+package com.example.aopdemo.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@ComponentScan
+@EnableAspectJAutoProxy
+public class AppConfig {
 }
