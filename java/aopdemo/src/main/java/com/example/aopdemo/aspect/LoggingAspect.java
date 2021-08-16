@@ -1,6 +1,7 @@
 package com.example.aopdemo.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -15,7 +16,7 @@ public class LoggingAspect {
         System.err.println("before: doaccesscheck");
     }
 
-    @Around("execution(public * com.example.aopdemo.service.MailService.*(..))")
+    @After("execution(public * com.example.aopdemo.service.MailService.*(..))")
     public Object doLogging(ProceedingJoinPoint pjp) throws Throwable {
         System.err.println("around: start " + pjp.getSignature());
         Object retVal = pjp.proceed();
