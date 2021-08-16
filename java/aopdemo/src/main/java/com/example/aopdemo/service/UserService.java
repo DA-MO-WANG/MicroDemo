@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public void print() {
-        System.out.println("service包下的方法");
+        System.out.println("userservice  的方法");
     }
 }
