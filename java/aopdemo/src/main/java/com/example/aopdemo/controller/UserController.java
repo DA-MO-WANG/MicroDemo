@@ -14,7 +14,7 @@ public class UserController {
     public MailService mailService;
     @GetMapping("/hello")
     public String hello() {
-        userService.print();
+        //userService.print();
         mailService.print();
         return "1234567";
     }
