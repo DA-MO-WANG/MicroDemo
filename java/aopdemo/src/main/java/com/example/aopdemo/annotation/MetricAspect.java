@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class MetricAspect {
-    //基于注解定位的
+    //基于注解定位的切面
     @Around("@annotation(metricTime)")
     public Object metric(ProceedingJoinPoint joinPoint, MetricTime metricTime) throws Throwable {
         String name = metricTime.value();
