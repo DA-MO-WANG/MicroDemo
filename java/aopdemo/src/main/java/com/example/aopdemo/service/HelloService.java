@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class HelloService {
     @MetricTime("register")
     public void register() {
-        
+
     }
 }
