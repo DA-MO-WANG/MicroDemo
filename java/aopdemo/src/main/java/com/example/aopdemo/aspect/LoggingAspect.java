@@ -18,9 +18,9 @@ public class LoggingAspect {
 
     @Around("execution(public * com.example.aopdemo.service.MailService.*(..))")
     public Object doLogging(ProceedingJoinPoint pjp) throws Throwable {
-        System.err.println("around: start " + pjp.getSignature());
+        System.out.println("around: start " + pjp.getSignature());
         Object retVal = pjp.proceed();
-        System.err.println("around: done " + pjp.getSignature());
+        System.out.println("around: done " + pjp.getSignature());
         return retVal;
     }
 }
