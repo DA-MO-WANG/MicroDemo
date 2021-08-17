@@ -23,7 +23,8 @@ public class LoggingAspect {
     public Object doLogging(ProceedingJoinPoint pjp) throws Throwable {
         //不清楚为什么：用system.err 就会导致异步效果，打印的先执行
         System.out.println("around: start " + pjp.getSignature());
-        Object retVal = pjp.proceed();//切入点执行，调用原业务方法
+        //切入点执行，调用原业务方法
+        Object retVal = pjp.proceed();
         System.out.println("around: done " + pjp.getSignature());
         return retVal;
     }
