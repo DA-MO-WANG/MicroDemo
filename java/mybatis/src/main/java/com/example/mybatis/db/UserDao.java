@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.HashMap;
 
 @Mapper
-@Repository
 public interface UserDao {
     @Select("select * from user where name=#{name}")
     User searchUser(String name);
