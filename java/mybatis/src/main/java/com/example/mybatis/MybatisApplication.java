@@ -14,6 +14,8 @@ public class MybatisApplication {
     * ----mybatis的starter自动配置的作用，省去了 config、bean
     *
     * namespace--mapper中作用是绑定对应的dao接口
+    * #{} 替换？
+    * ${} 替换字符串值
     *
     * */
 
