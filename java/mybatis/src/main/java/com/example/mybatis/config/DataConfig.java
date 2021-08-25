@@ -9,9 +9,5 @@ import javax.sql.DataSource;
 @Configuration
 public class DataConfig {
 
-    @Bean
-    public DataSource dataSource() {
-        DruidData
 
-    }
 }
