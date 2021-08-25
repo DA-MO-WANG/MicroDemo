@@ -1,2 +1,7 @@
-package com.example.mybatis.service;public interface UserService {
+package com.example.mybatis.service;
+
+import com.example.mybatis.pojo.User;
+
+public interface UserService {
+    User getUser(String name);
 }
