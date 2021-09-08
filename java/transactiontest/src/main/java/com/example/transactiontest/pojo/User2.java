@@ -1,2 +1,9 @@
-package com.example.transactiontest.pojo;public class User2 {
+package com.example.transactiontest.pojo;
+
+import lombok.Data;
+
+@Data
+public class User2 {
+    private Integer id;
+    private String name;
 }
