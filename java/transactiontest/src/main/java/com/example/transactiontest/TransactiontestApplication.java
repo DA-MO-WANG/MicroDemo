@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TransactiontestApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TransactiontestApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TransactiontestApplication.class, args);
+    }
 
 }
