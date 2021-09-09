@@ -14,7 +14,8 @@ public class Main implements Test{
 
     @Override
     public void notransaction_exception_required_required() {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor();
+        //ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor();
+        synchronized (this){}
         User1 user1 = new User1();
         user1.setName("张三");
         user1Service.addRequired(user1);
