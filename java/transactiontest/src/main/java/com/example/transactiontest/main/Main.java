@@ -5,6 +5,8 @@ import com.example.transactiontest.pojo.User2;
 import com.example.transactiontest.service.User1Service;
 import com.example.transactiontest.service.User2Service;
 
+import java.util.concurrent.ThreadPoolExecutor;
+
 public class Main implements Test{
     private User1Service user1Service;
     private User2Service user2Service;
@@ -12,6 +14,7 @@ public class Main implements Test{
 
     @Override
     public void notransaction_exception_required_required() {
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor();
         User1 user1 = new User1();
         user1.setName("张三");
         user1Service.addRequired(user1);
