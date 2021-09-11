@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
         for (int i= 0; i < 10000; i++) {
-            exec.execute(new Task());
+            exec.execute(new Task(i));
         }
         exec.shutdown();
     }

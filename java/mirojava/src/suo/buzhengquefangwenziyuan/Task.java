@@ -2,6 +2,14 @@ package suo.buzhengquefangwenziyuan;
 
 public class Task implements Runnable{
     private volatile int age = 0;
+    private final int id;
+
+
+    public Task(int id) {
+        this.id = id;
+    }
+
+
     public void live() {
         age++;
         age++;
