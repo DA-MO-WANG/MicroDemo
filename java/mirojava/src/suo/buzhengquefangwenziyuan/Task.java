@@ -15,7 +15,7 @@ public class Task implements Runnable{
     public void run() {
         user.live();
         if (user.age % 2 != 0) {
-            System.out.println("并发失败");
+            System.out.println("并发失败---"+id);
         }
     }
 }
