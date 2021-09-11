@@ -1,23 +1,20 @@
 package suo.buzhengquefangwenziyuan;
 
 public class Task implements Runnable{
-    private volatile int age = 0;
+    private User user;
     private final int id;
 
 
-    public Task(int id) {
+    public Task(User user, int id) {
+        this.user = user;
         this.id = id;
     }
 
 
-    public void live() {
-        ++age;
-        ++age;
-    }
     @Override
     public void run() {
-        live();
-        if (age % 2 != 0) {
+        user.live();
+        if (user.age % 2 != 0) {
             System.out.println("并发失败");
         }
     }
