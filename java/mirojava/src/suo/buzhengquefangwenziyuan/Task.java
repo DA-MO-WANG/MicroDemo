@@ -11,8 +11,8 @@ public class Task implements Runnable{
 
 
     public void live() {
-        age++;
-        age++;
+        ++age;
+        ++age;
     }
     @Override
     public void run() {
