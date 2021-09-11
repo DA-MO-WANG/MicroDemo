@@ -1,11 +1,12 @@
 package suo.buzhengquefangwenziyuan;
 
 public class Task implements Runnable{
-    private User user = new User();
+    private int age = 0;
     @Override
     public void run() {
-        user.live();
-        if (user.age % 2 != 0) {
+        age++;
+        age++;
+        if (age % 2 != 0) {
             System.out.println("并发失败");
         }
     }
