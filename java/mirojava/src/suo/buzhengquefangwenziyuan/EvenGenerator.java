@@ -1,11 +1,11 @@
 package suo.buzhengquefangwenziyuan;
 
 public class EvenGenerator extends IntGenerator{
-    private int currentEvenValue = 0;
+    private volatile int currentEvenValue = 0;
     @Override
-    public synchronized int next() {
+    public  int next() {
         ++currentEvenValue;
-        Thread.yield();
+        //Thread.yield();
         ++currentEvenValue;
         return currentEvenValue;
     }
