@@ -3,8 +3,9 @@ package suo.buzhengquefangwenziyuan;
 public class EvenGenerator extends IntGenerator{
     private int currentEvenValue = 0;
     @Override
-    public int next() {
+    public synchronized int next() {
         ++currentEvenValue;
+        Thread.yield();
         ++currentEvenValue;
         return currentEvenValue;
     }
