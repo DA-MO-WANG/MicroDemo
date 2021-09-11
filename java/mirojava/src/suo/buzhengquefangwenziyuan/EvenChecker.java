@@ -16,6 +16,9 @@ public class EvenChecker implements Runnable{
 
     @Override
     public void run() {
+        //while 条件里的条件+ 循环体内部相关，就能在自己指定的情况跳出循环
+        //怎么识别并发失败？
+            //理论上不会出现其他，只会出现偶数，只有并发导致失误才会产生失败
         while (!generator.isCanceled()) {
             int val = generator.next();
             if (val % 2 != 0) {
