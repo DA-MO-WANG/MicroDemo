@@ -3,6 +3,9 @@ package suo.locktest;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 不是很理解这个范例
+ */
 public class AttemptLocking {
     private ReentrantLock lock = new ReentrantLock();
     public void untimed() {
