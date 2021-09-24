@@ -21,7 +21,7 @@ public class Solution {
                 }
             }
         }
-        return str.substring(left,right);
+        return str.substring(res[1],res[0]);
 
     }
 
