@@ -12,7 +12,7 @@ public class Solution {
         for (left = 0; left < str.length(); left++) {
             for (right = left + 1; right < str.length(); right++) {
                 if (str.charAt(right) == str.charAt(left)) {
-                    if (len == Math.max(len,right - left)) {
+                    if (len != Math.max(len,right - left)) {
                         res[0] = right;
                         res[1] = left;
                     }
