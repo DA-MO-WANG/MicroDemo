@@ -25,7 +25,7 @@ public class ReferenceCountingGC {
         /*
         * [GC (System.gc()) [PSYoungGen: 11991K->464K(153088K)] 11991K->472K(502784K), 0.0014362 secs] [Times: user=0.00 sys=0.00, real=0.00 secs]
 [Full GC (System.gc()) [PSYoungGen: 464K->0K(153088K)] [ParOldGen: 8K->341K(349696K)] 472K->341K(502784K), [Metaspace: 3043K->3043K(1056768K)], 0.0041395 secs] [Times: user=0.01 sys=0.00, real=0.01 secs]
-Heap
+Heapt
  PSYoungGen      total 153088K, used 3947K [0x0000000715580000, 0x0000000720000000, 0x00000007c0000000)
   eden space 131584K, 3% used [0x0000000715580000,0x000000071595af98,0x000000071d600000)
   from space 21504K, 0% used [0x000000071d600000,0x000000071d600000,0x000000071eb00000)
