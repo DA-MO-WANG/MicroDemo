@@ -34,9 +34,9 @@ public class Test01 {
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             System.out.println(str.length());
             return br.readLine();
-            
         }catch (IOException |NullPointerException e) {
             System.out.println("111111");
         }
+        return null;
     }
 }
