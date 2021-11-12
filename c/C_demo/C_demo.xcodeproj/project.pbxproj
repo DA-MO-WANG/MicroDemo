@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		78CFD73F273E8CFB00AB6CAD /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD73E273E8CFB00AB6CAD /* mem.c */; };
 		78CFD742273E9D0000AB6CAD /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD741273E9D0000AB6CAD /* thread.c */; };
+		78CFD74B273E9F1000AB6CAD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CFD74A273E9F1000AB6CAD /* Media.xcassets */; };
+		78CFD74D273E9F1000AB6CAD /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 78CFD74C273E9F1000AB6CAD /* icon.icns */; };
+		78CFD750273E9F1000AB6CAD /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD74F273E9F1000AB6CAD /* ActionViewController.m */; };
+		78CFD753273E9F1000AB6CAD /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78CFD751273E9F1000AB6CAD /* ActionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +33,25 @@
 		78CFD740273E8FD200AB6CAD /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		78CFD741273E9D0000AB6CAD /* thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
 		78CFD743273E9D7D00AB6CAD /* common_threads.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_threads.h; sourceTree = "<group>"; };
+		78CFD748273E9F1000AB6CAD /* another_main.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = another_main.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CFD74A273E9F1000AB6CAD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		78CFD74C273E9F1000AB6CAD /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		78CFD74E273E9F1000AB6CAD /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		78CFD74F273E9F1000AB6CAD /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		78CFD752273E9F1000AB6CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActionViewController.xib; sourceTree = "<group>"; };
+		78CFD754273E9F1000AB6CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78CFD755273E9F1000AB6CAD /* another_main.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = another_main.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		78CFD730273E8C5500AB6CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78CFD745273E9F1000AB6CAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				78CFD735273E8C5500AB6CAD /* C_demo */,
+				78CFD749273E9F1000AB6CAD /* another_main */,
 				78CFD734273E8C5500AB6CAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				78CFD733273E8C5500AB6CAD /* C_demo */,
+				78CFD748273E9F1000AB6CAD /* another_main.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +88,20 @@
 				78CFD743273E9D7D00AB6CAD /* common_threads.h */,
 			);
 			path = C_demo;
+			sourceTree = "<group>";
+		};
+		78CFD749273E9F1000AB6CAD /* another_main */ = {
+			isa = PBXGroup;
+			children = (
+				78CFD74A273E9F1000AB6CAD /* Media.xcassets */,
+				78CFD74C273E9F1000AB6CAD /* icon.icns */,
+				78CFD74E273E9F1000AB6CAD /* ActionViewController.h */,
+				78CFD74F273E9F1000AB6CAD /* ActionViewController.m */,
+				78CFD751273E9F1000AB6CAD /* ActionViewController.xib */,
+				78CFD754273E9F1000AB6CAD /* Info.plist */,
+				78CFD755273E9F1000AB6CAD /* another_main.entitlements */,
+			);
+			path = another_main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +124,23 @@
 			productReference = 78CFD733273E8C5500AB6CAD /* C_demo */;
 			productType = "com.apple.product-type.tool";
 		};
+		78CFD747273E9F1000AB6CAD /* another_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78CFD756273E9F1000AB6CAD /* Build configuration list for PBXNativeTarget "another_main" */;
+			buildPhases = (
+				78CFD744273E9F1000AB6CAD /* Sources */,
+				78CFD745273E9F1000AB6CAD /* Frameworks */,
+				78CFD746273E9F1000AB6CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = another_main;
+			productName = another_main;
+			productReference = 78CFD748273E9F1000AB6CAD /* another_main.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +151,9 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					78CFD732273E8C5500AB6CAD = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					78CFD747273E9F1000AB6CAD = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -117,9 +172,23 @@
 			projectRoot = "";
 			targets = (
 				78CFD732273E8C5500AB6CAD /* C_demo */,
+				78CFD747273E9F1000AB6CAD /* another_main */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78CFD746273E9F1000AB6CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78CFD74B273E9F1000AB6CAD /* Media.xcassets in Resources */,
+				78CFD74D273E9F1000AB6CAD /* icon.icns in Resources */,
+				78CFD753273E9F1000AB6CAD /* ActionViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		78CFD72F273E8C5500AB6CAD /* Sources */ = {
@@ -131,7 +200,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		78CFD744273E9F1000AB6CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78CFD750273E9F1000AB6CAD /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78CFD751273E9F1000AB6CAD /* ActionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78CFD752273E9F1000AB6CAD /* Base */,
+			);
+			name = ActionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		78CFD738273E8C5500AB6CAD /* Debug */ = {
@@ -261,6 +349,54 @@
 			};
 			name = Release;
 		};
+		78CFD757273E9F1000AB6CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = another_main/another_main.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = another_main/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = another_main;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myC.another-main";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		78CFD758273E9F1000AB6CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = another_main/another_main.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = another_main/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = another_main;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myC.another-main";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +414,15 @@
 			buildConfigurations = (
 				78CFD73B273E8C5500AB6CAD /* Debug */,
 				78CFD73C273E8C5500AB6CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78CFD756273E9F1000AB6CAD /* Build configuration list for PBXNativeTarget "another_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78CFD757273E9F1000AB6CAD /* Debug */,
+				78CFD758273E9F1000AB6CAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
