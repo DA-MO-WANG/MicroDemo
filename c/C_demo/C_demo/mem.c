@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include "common.h"
 
-int main(int argc, char *argv[]) {
+int main1(int argc, char *argv[]) {
     if (argc != 2) {
     fprintf(stderr, "usage: mem <value>\n");
     exit(1);

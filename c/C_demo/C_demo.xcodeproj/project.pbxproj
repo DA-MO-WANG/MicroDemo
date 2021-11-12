@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		78CFD73F273E8CFB00AB6CAD /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD73E273E8CFB00AB6CAD /* mem.c */; };
 		78CFD742273E9D0000AB6CAD /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD741273E9D0000AB6CAD /* thread.c */; };
-		78CFD74B273E9F1000AB6CAD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CFD74A273E9F1000AB6CAD /* Media.xcassets */; };
-		78CFD74D273E9F1000AB6CAD /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 78CFD74C273E9F1000AB6CAD /* icon.icns */; };
-		78CFD750273E9F1000AB6CAD /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD74F273E9F1000AB6CAD /* ActionViewController.m */; };
-		78CFD753273E9F1000AB6CAD /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78CFD751273E9F1000AB6CAD /* ActionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,13 +30,6 @@
 		78CFD741273E9D0000AB6CAD /* thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
 		78CFD743273E9D7D00AB6CAD /* common_threads.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_threads.h; sourceTree = "<group>"; };
 		78CFD748273E9F1000AB6CAD /* another_main.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = another_main.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		78CFD74A273E9F1000AB6CAD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		78CFD74C273E9F1000AB6CAD /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		78CFD74E273E9F1000AB6CAD /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
-		78CFD74F273E9F1000AB6CAD /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
-		78CFD752273E9F1000AB6CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActionViewController.xib; sourceTree = "<group>"; };
-		78CFD754273E9F1000AB6CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78CFD755273E9F1000AB6CAD /* another_main.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = another_main.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				78CFD735273E8C5500AB6CAD /* C_demo */,
-				78CFD749273E9F1000AB6CAD /* another_main */,
 				78CFD734273E8C5500AB6CAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,20 +76,6 @@
 				78CFD743273E9D7D00AB6CAD /* common_threads.h */,
 			);
 			path = C_demo;
-			sourceTree = "<group>";
-		};
-		78CFD749273E9F1000AB6CAD /* another_main */ = {
-			isa = PBXGroup;
-			children = (
-				78CFD74A273E9F1000AB6CAD /* Media.xcassets */,
-				78CFD74C273E9F1000AB6CAD /* icon.icns */,
-				78CFD74E273E9F1000AB6CAD /* ActionViewController.h */,
-				78CFD74F273E9F1000AB6CAD /* ActionViewController.m */,
-				78CFD751273E9F1000AB6CAD /* ActionViewController.xib */,
-				78CFD754273E9F1000AB6CAD /* Info.plist */,
-				78CFD755273E9F1000AB6CAD /* another_main.entitlements */,
-			);
-			path = another_main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +156,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78CFD74B273E9F1000AB6CAD /* Media.xcassets in Resources */,
-				78CFD74D273E9F1000AB6CAD /* icon.icns in Resources */,
-				78CFD753273E9F1000AB6CAD /* ActionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,22 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78CFD750273E9F1000AB6CAD /* ActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		78CFD751273E9F1000AB6CAD /* ActionViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78CFD752273E9F1000AB6CAD /* Base */,
-			);
-			name = ActionViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		78CFD738273E8C5500AB6CAD /* Debug */ = {
