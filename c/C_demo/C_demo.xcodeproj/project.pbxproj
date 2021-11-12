@@ -28,6 +28,7 @@
 		78CFD73E273E8CFB00AB6CAD /* mem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mem.c; sourceTree = "<group>"; };
 		78CFD740273E8FD200AB6CAD /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		78CFD741273E9D0000AB6CAD /* thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
+		78CFD743273E9D7D00AB6CAD /* common_threads.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_threads.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				78CFD73E273E8CFB00AB6CAD /* mem.c */,
 				78CFD740273E8FD200AB6CAD /* common.h */,
 				78CFD741273E9D0000AB6CAD /* thread.c */,
+				78CFD743273E9D7D00AB6CAD /* common_threads.h */,
 			);
 			path = C_demo;
 			sourceTree = "<group>";
