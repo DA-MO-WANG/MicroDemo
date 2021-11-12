@@ -1,27 +1,21 @@
-#ifndef __COMMON_H
-#define __COMMON_H
+#ifndef __common_h__
+#define __common_h__
 
-// 基本常用头文件
-#include <time.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <strings.h>
-#include <stdbool.h>
-
-// 全局错误码
-#include <errno.h>
-
-// 文件IO操作
-#include <stdio.h>
-#include <fcntl.h>
+#include <sys/time.h>
 #include <sys/stat.h>
-#include <sys/types.h>
+#include <assert.h>
 
-// 数学库
-#include <math.h>
+double GetTime() {
+    struct timeval t;
+    int rc = gettimeofday(&t, NULL);
+    assert(rc == 0);
+    return (double) t.tv_sec + (double) t.tv_usec/1e6;
+}
 
-// 目录
-#include <dirent.h>
+void Spin(int howlong) {
+    double t = GetTime();
+    while ((GetTime() - t) < (double) howlong)
+    ; // do nothing in loop
+}
 
-#endif
+#endif // __common_h__
