@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <assert.h>
 
-double GetTime() {
+double GetTime(void) {
     struct timeval t;
     int rc = gettimeofday(&t, NULL);
     assert(rc == 0);
