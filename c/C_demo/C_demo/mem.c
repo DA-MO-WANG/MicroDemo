@@ -11,10 +11,10 @@
 #include "common.h"
 
 int main(int argc, char *argv[]) {
-    if (argc != 2) {
-    fprintf(stderr, "usage: mem <value>\n");
-    exit(1);
-    }
+    //if (argc != 2) {
+    //fprintf(stderr, "usage: mem <value>\n");
+   // exit(1);
+    //}
     int *p;
     p = malloc(sizeof(int));
     assert(p != NULL);
