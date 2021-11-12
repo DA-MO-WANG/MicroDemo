@@ -15,7 +15,7 @@ int
 main(int argc, char *argv[]) {
     int *p = malloc(sizeof(int));
     assert(p != NULL);
-    printf("(%d) memory address of p: %08x\n",getpid(),(unsigned)p);
+    printf("(%d) memory address of p: %08x\n",getpid(),p);
     *p = 0;
     while(1) {
         Spin(1);
