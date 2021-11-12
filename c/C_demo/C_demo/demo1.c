@@ -20,7 +20,7 @@ main(int argc, char *argv[]) {
     while(1) {
         Spin(1);
         *p = *p + 1;
-        printf("(%d) p: %d\n", getid(), *p);
+        printf("(%d) p: %d\n", getpid(), *p);
     }
     return 0;
 }
