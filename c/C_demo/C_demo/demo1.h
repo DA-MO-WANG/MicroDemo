@@ -9,5 +9,9 @@
 #define demo1_h
 
 #include <stdio.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "common.h"
 
 #endif /* demo1_h */
