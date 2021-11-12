@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78CFD737273E8C5500AB6CAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD736273E8C5500AB6CAD /* main.c */; };
-		78CFD73F273E8CFB00AB6CAD /* demo1.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD73E273E8CFB00AB6CAD /* demo1.c */; };
+		78CFD73F273E8CFB00AB6CAD /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD73E273E8CFB00AB6CAD /* mem.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,7 @@
 /* Begin PBXFileReference section */
 		78CFD733273E8C5500AB6CAD /* C_demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C_demo; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CFD736273E8C5500AB6CAD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		78CFD73D273E8CFB00AB6CAD /* demo1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = demo1.h; sourceTree = "<group>"; };
-		78CFD73E273E8CFB00AB6CAD /* demo1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = demo1.c; sourceTree = "<group>"; };
+		78CFD73E273E8CFB00AB6CAD /* mem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mem.c; sourceTree = "<group>"; };
 		78CFD740273E8FD200AB6CAD /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,8 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				78CFD736273E8C5500AB6CAD /* main.c */,
-				78CFD73D273E8CFB00AB6CAD /* demo1.h */,
-				78CFD73E273E8CFB00AB6CAD /* demo1.c */,
+				78CFD73E273E8CFB00AB6CAD /* mem.c */,
 				78CFD740273E8FD200AB6CAD /* common.h */,
 			);
 			path = C_demo;
@@ -126,7 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78CFD73F273E8CFB00AB6CAD /* demo1.c in Sources */,
+				78CFD73F273E8CFB00AB6CAD /* mem.c in Sources */,
 				78CFD737273E8C5500AB6CAD /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
