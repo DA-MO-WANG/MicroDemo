@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 		exit(1);
 	}else if(rc == 0) {
 		close(STDOUT_FILENO);
-		open("./p4.c.output",O_CREATE|O_WRONLY|O_TRUNC,S_TRWXU);
+		open("./p4.output",0_CREATE|0_WRONLY|0_TRUNC,S_IRWXU);
 
 		char *myargs[3];
 		myargs[0] = strdup("wc");
