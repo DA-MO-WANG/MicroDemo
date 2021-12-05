@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
 		printf("子进程(pid:%d) x的值为%d \n",(int)getpid(),x);
 	}else {
 		int wc = wait(NULL);
-		x = 100;
 		printf("(父进程pid:%d) x的值为%d \n",(int)getpid(),x);
 	}
 	return 0;
