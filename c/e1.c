@@ -14,10 +14,11 @@ int main(int argc, char *argv[]) {
 		fprintf(stderr,"fork failed\n");
 		exit(1);
 	}else if(rc == 0) {
+		x = 200;
 
 		printf("子进程(pid:%d) x的值为%d \n",(int)getpid(),x);
 	}else {
-		//int wc = wait(NULL);
+		int wc = wait(NULL);
 		x = 100;
 		printf("(父进程pid:%d) x的值为%d \n",(int)getpid(),x);
 	}
