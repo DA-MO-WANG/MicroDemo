@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include <string.h>
+#include <sys/wait.h>
 int main(int argc, char *argv[]) {
 //打印进程id
 	printf("hello world (pid:%d)\n",(int)getpid());
