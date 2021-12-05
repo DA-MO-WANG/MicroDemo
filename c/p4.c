@@ -19,6 +19,7 @@ int main(int argc, char *argv[]) {
 		myargs[0] = strdup("wc");
 		myargs[1] = strdup("p4.c");
 		myargs[2] = NULL;
+		execvp(myargs[0],myargs);
 
 	}else {
 		int wc = wait(NULL);
