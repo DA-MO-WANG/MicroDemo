@@ -5,7 +5,8 @@
 #include <string.h>
 #include <sys/wait.h>
 int main(int argc, char *argv[]) {
-//打印进程id
+//fork是复制进程资源，把那一刻的状态打了个副本
+//子进程和父进程是两块空间，只是原点的内容是一样的
 	//printf("hello world (pid:%d)\n",(int)getpid());
 	int x = 1;
 	int rc = fork();
