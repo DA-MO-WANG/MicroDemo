@@ -1,2 +1,11 @@
-package com.example.feigndemo.service;public class RibbonService {
+package com.example.feigndemo.service;
+
+import org.springframework.web.client.RestTemplate;
+
+public class RibbonService {
+    private RestTemplate restTemplate;
+
+    public void testRibbon() {
+        String result = restTemplate.getForObject("")
+    }
 }
