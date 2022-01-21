@@ -6,6 +6,6 @@ public class RibbonService {
     private RestTemplate restTemplate;
 
     public void testRibbon() {
-        String result = restTemplate.getForObject("")
+        String result = restTemplate.getForObject("http://city/cityTest",String.class);
     }
 }
