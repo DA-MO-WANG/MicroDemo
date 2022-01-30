@@ -1,4 +1,3 @@
 #!/bin/bash
-a = $1
-b = $2
-echo (a + b)
+cmd = `date + %F`
+echo $cmd
