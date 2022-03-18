@@ -39,6 +39,7 @@ public class Main {
         requestHeader.setChnlTime("1010101001");
         requestHeader.setOpenId("2333333333333");
         requestObj.setHeader(requestHeader);
+        requestObj.setBody(body);
         String res = "null";
         try {
             res = JaxpUtil.toXML(requestObj);
