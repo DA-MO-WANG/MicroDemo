@@ -8,7 +8,7 @@ import java.util.List;
 @XmlAccessorOrder(XmlAccessOrder.ALPHABETICAL)
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RequestBody",propOrder = {
-        "name","apIdType","certNo","embName","addressEntityLists"
+        "name","apIdType","certNo","embName","addressEntityList"
 })
 public class JavaEntityBody {
     @XmlElement(name = "name")
