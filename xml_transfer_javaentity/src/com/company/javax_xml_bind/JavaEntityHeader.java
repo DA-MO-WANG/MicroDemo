@@ -1,5 +1,7 @@
 package com.company.javax_xml_bind;
 
+import com.company.javax_xml_bind.util.JsonUtil;
+
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorOrder(XmlAccessOrder.ALPHABETICAL)
@@ -47,5 +49,10 @@ public class JavaEntityHeader {
 
     public void setChnlTime(String chnlTime) {
         this.chnlTime = chnlTime;
+    }
+
+    @Override
+    public String toString() {
+        return JsonUtil.getJsonUtil().objectToJsonstr(this);
     }
 }

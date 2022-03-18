@@ -1,5 +1,7 @@
 package com.company.javax_xml_bind;
 
+import com.company.javax_xml_bind.util.JsonUtil;
+
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorOrder(XmlAccessOrder.ALPHABETICAL)
@@ -38,5 +40,10 @@ public class AddressEntity {
 
     public void setDistrict(String district) {
         this.district = district;
+    }
+
+    @Override
+    public String toString() {
+        return JsonUtil.getJsonUtil().objectToJsonstr(this);
     }
 }

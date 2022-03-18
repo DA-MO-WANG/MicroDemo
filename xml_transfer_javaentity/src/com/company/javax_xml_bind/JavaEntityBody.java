@@ -1,5 +1,7 @@
 package com.company.javax_xml_bind;
 
+import com.company.javax_xml_bind.util.JsonUtil;
+
 import javax.xml.bind.annotation.*;
 import java.util.List;
 
@@ -60,5 +62,10 @@ public class JavaEntityBody {
 
     public void setAddressEntityList(List<AddressEntity> addressEntityList) {
         this.addressEntityList = addressEntityList;
+    }
+
+    @Override
+    public String toString() {
+        return JsonUtil.getJsonUtil().objectToJsonstr(this);
     }
 }

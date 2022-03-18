@@ -1,5 +1,7 @@
 package com.company.javax_xml_bind;
 
+import com.company.javax_xml_bind.util.JsonUtil;
+
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorOrder(XmlAccessOrder.ALPHABETICAL)
@@ -8,9 +10,9 @@ import javax.xml.bind.annotation.*;
         "header","body"})
 @XmlRootElement(name = "ROOT")
 public class RequestInfo {
-    @XmlElement(name = "requestHead")
+    @XmlElement(name = "RequestHead")
     private JavaEntityHeader header;
-    @XmlElement(name = "requestBody")
+    @XmlElement(name = "RequestBody")
     private JavaEntityBody body;
 
     public JavaEntityHeader getHeader() {
@@ -27,5 +29,10 @@ public class RequestInfo {
 
     public void setBody(JavaEntityBody body) {
         this.body = body;
+    }
+
+    @Override
+    public String toString() {
+        return JsonUtil.getJsonUtil().objectToJsonstr(this);
     }
 }
