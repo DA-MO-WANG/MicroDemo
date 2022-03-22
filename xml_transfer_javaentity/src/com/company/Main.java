@@ -59,7 +59,7 @@ public class Main {
         } catch (JAXBException e) {
             e.printStackTrace();
             log.error("生成报文失败！");
-            
+
         } finally {
             System.out.println(res);
         }
