@@ -13,6 +13,7 @@ import org.jdom2.JDOMException;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +61,9 @@ public class Main {
         } finally {
             System.out.println(json);
         }
+
+
+        DateFormat
 
 
     }
