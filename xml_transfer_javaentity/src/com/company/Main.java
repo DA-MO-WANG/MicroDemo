@@ -54,7 +54,7 @@ public class Main {
         JSONObject json = null;
         try {
             res = JaxpUtil.toXML(requestObj);
-            final Object o = JSONObject.toJSON(list);
+            res = JSONObject.toJSON(list).toString();
             json = XmlUtils.xml2Json(res);
         } catch (JAXBException e) {
             e.printStackTrace();
@@ -65,7 +65,7 @@ public class Main {
         } catch (JDOMException e) {
             e.printStackTrace();
         } finally {
-            System.out.println(json);
+            System.out.println(res);
         }
 
 
