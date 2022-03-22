@@ -45,11 +45,11 @@ public class Main {
         requestHeader.setChnlDate("20220902");
         requestHeader.setChnlTime("1010101001");
         requestHeader.setOpenId("2333333333333");
-        //requestObj.setHeader(requestHeader);
-        //requestObj.setBody(body);
+        requestObj.setHeader(requestHeader);
+        requestObj.setBody(body);
         LinkedList list = new LinkedList();
-        list.add(requestHeader);
-        list.add(body);
+        list.add(requestObj);
+        //list.add(body);
         String res = "null";
         JSONObject json = null;
         try {
