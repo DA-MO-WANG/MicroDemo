@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.jdom:jdom2:0.0.2-BETA" type="repository">
+    <properties maven-id="org.jdom:jdom2:0.0.2-BETA" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/jdom/jdom2/0.0.2-BETA/jdom2-0.0.2-BETA.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
