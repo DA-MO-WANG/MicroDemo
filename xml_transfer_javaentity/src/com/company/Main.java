@@ -5,10 +5,13 @@ import com.company.javax_xml_bind.JavaEntityBody;
 import com.company.javax_xml_bind.JavaEntityHeader;
 import com.company.javax_xml_bind.RequestInfo;
 import com.company.javax_xml_bind.util.JaxpUtil;
+import com.company.javax_xml_bind.util.XmlUtils;
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
+import org.jdom2.JDOMException;
 
 import javax.xml.bind.JAXBException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,12 +46,16 @@ public class Main {
         String res = "null";
         try {
             res = JaxpUtil.toXML(requestObj);
-
+            res = XmlUtils.xml2Json(res);
         } catch (JAXBException e) {
             e.printStackTrace();
             log.error("生成报文失败！");
 
-        }finally {
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JDOMException e) {
+            e.printStackTrace();
+        } finally {
             System.out.println(res);
         }
 
