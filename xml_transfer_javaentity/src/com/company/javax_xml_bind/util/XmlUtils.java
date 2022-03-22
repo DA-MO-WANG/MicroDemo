@@ -1,5 +1,6 @@
 package com.company.javax_xml_bind.util;
 
+import com.sun.tools.javac.util.StringUtils;
 import org.jdom2.Document;
 import org.jdom2.JDOMException;
 import com.alibaba.fastjson.JSONObject;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class XmlUtils {
     public static JSONObject xml2Json(String xmlStr) throws JDOMException, IOException {
-        if (StringUtils.isEmpty(xmlStr)) {
+        if (xmlStr == null) {
             return null;
         }
         xmlStr = xmlStr.replaceAll("\\\n", "");
