@@ -1,6 +1,5 @@
 package com.company.javax_xml_bind.util;
 
-import com.sun.tools.javac.util.StringUtils;
 import org.jdom2.Document;
 import org.jdom2.JDOMException;
 import com.alibaba.fastjson.JSONObject;
@@ -40,7 +39,7 @@ public class XmlUtils {
         for (Element child : node) {
             list = new LinkedList();
             String text = child.getTextTrim();
-            if (StringUtils.isBlank(text)) {
+            if (text == null || "".equals(text)) {
                 if (child.getChildren().size() == 0) {
                     continue;
                 }
