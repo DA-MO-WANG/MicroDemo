@@ -43,7 +43,7 @@ public class Main {
         String res = "null";
         try {
             res = JaxpUtil.toXML(requestObj);
-            
+
         } catch (JAXBException e) {
             e.printStackTrace();
             log.error("生成报文失败！");
