@@ -55,15 +55,11 @@ public class Main {
         try {
             res = JaxpUtil.toXML(requestObj);
             res = JSONObject.toJSON(list).toString();
-            json = XmlUtils.xml2Json(res);
+            //json = XmlUtils.xml2Json(res);
         } catch (JAXBException e) {
             e.printStackTrace();
             log.error("生成报文失败！");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JDOMException e) {
-            e.printStackTrace();
+            
         } finally {
             System.out.println(res);
         }
