@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -44,12 +45,16 @@ public class Main {
         requestHeader.setChnlDate("20220902");
         requestHeader.setChnlTime("1010101001");
         requestHeader.setOpenId("2333333333333");
-        requestObj.setHeader(requestHeader);
-        requestObj.setBody(body);
+        //requestObj.setHeader(requestHeader);
+        //requestObj.setBody(body);
+        LinkedList list = new LinkedList();
+        list.add(requestHeader);
+        list.add(body);
         String res = "null";
         JSONObject json = null;
         try {
             res = JaxpUtil.toXML(requestObj);
+            final Object o = JSONObject.toJSON(list);
             json = XmlUtils.xml2Json(res);
         } catch (JAXBException e) {
             e.printStackTrace();
