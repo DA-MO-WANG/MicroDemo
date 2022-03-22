@@ -1,5 +1,6 @@
 package com.company;
 
+import com.alibaba.fastjson.JSONObject;
 import com.company.javax_xml_bind.AddressEntity;
 import com.company.javax_xml_bind.JavaEntityBody;
 import com.company.javax_xml_bind.JavaEntityHeader;
@@ -44,9 +45,10 @@ public class Main {
         requestObj.setHeader(requestHeader);
         requestObj.setBody(body);
         String res = "null";
+        JSONObject json = null;
         try {
             res = JaxpUtil.toXML(requestObj);
-            res = XmlUtils.xml2Json(res);
+            json = XmlUtils.xml2Json(res);
         } catch (JAXBException e) {
             e.printStackTrace();
             log.error("生成报文失败！");
@@ -56,7 +58,7 @@ public class Main {
         } catch (JDOMException e) {
             e.printStackTrace();
         } finally {
-            System.out.println(res);
+            System.out.println(json);
         }
 
 
