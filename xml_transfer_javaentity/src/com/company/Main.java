@@ -68,7 +68,7 @@ public class Main {
 
     public static void main(String[] args) {
         Date date = new Date();
-        String format = new SimpleDateFormat("hh:mm:ss").format(date);
+        String format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(date);
         System.out.println(format);
 
     }
