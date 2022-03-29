@@ -3,13 +3,14 @@ package util;
 import java.io.*;
 
 public class FileUtil {
-    public static String readToBuffer(StringBuffer buffer,String filePath) {
-        String res = "";
+    public static String readToBuffer(String filePath) {
+        StringBuffer buffer = new StringBuffer();
         BufferedReader reader = null;
         InputStream is = null;
         try {
             is = new FileInputStream(filePath);
             reader = new BufferedReader(new InputStreamReader(is));
+            String res = "";
             res = reader.readLine();
             while (res != null) {
                buffer.append(res);
@@ -27,7 +28,7 @@ public class FileUtil {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return res;
+            return buffer.toString();
         }
     }
 }
