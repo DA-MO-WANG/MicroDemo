@@ -1,6 +1,9 @@
 package fastjson.model;
 
-public class Body {
+import java.io.Serializable;
+
+public class Body implements Serializable {
+    private static final long serialVersionUID = -9223365651070458532L;
     private String activity_no;
     private String activity_name;
     private String annual_fee;

@@ -1,7 +1,9 @@
 package fastjson.model;
 
-public class Header {
+import java.io.Serializable;
 
+public class Header implements Serializable {
+    private static final long serialVersionUID = -9223365651070458532L;
     private String chnl_time;
     private String open_id;
     private String crypt;

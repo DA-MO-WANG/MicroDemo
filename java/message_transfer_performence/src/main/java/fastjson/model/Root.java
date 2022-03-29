@@ -1,6 +1,9 @@
 package fastjson.model;
 
-public class Root im{
+import java.io.Serializable;
+
+public class Root implements Serializable {
+    private static final long serialVersionUID = -9223365651070458532L;
     Header service_header;
     Body service_body;
 
