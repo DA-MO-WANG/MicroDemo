@@ -1,2 +1,5 @@
-package fastjson.model;public class Header {
+package fastjson.model;
+
+public class Header {
+
 }

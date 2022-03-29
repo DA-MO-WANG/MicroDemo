@@ -1,2 +1,4 @@
-package fastjson.model;public class Body {
+package fastjson.model;
+
+public class Body {
 }
