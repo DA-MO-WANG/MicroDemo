@@ -20,7 +20,8 @@ public class FastJsonUtil {
 //        root.setService_header(service_header);
 
         String json =  FileUtil.readToBuffer("/Users/richheart/IdeaProjects/microdemo/java/message_transfer_performence/src/main/resources/static/hrbcn.json");
-        Root root = (Root)JSON.parse(json);
+        Root root = JSON.parseObject(json,Root.class);
+        //Root root = JSON.
         System.out.println(root.toString());
     }
 }
