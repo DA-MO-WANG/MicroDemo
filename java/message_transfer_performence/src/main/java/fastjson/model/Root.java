@@ -28,7 +28,7 @@ public class Root implements Serializable {
 
     @Override
     public String toString() {
-        return "{" +
+        return "{\n" +
                 "  \"service_header\": {\n" +
                 "    \"chnl_time\": "+service_header.getChnl_time()+",\n" +
                 "    \"open_id\": "+service_header.getOpen_id()+",\n" +
@@ -38,12 +38,12 @@ public class Root implements Serializable {
                 "    \"rsp_msg\": "+service_header.getRsp_msg()+",\n" +
                 "    \"chnl\": "+service_header.getChnl()+",\n" +
                 "    \"chnl_flow\": "+service_header.getChnl_flow()+
-                "  },\n" +
+                " \n },\n" +
                 "  \"service_body\": {\n" +
                 "    \"activity_no\": "+service_body.getActivity_no()+",\n" +
                 "    \"activity_name\": "+service_body.getActivity_name()+",\n" +
                 "    \"annual_fee\": "+service_body.getAnnual_fee() +
-                "  }\n" +
+                "  \n}" +
                 "}";
     }
 }
