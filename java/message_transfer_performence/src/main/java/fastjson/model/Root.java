@@ -3,12 +3,26 @@ package fastjson.model;
 import java.io.Serializable;
 
 public class Root implements Serializable {
-    private static final long serialVersionUID = -9223365650070458532L;
+    //private static final long serialVersionUID = -9223365650070458532L;
     Header service_header;
     Body service_body;
 
-    public Root(Header service_header, Body service_body) {
+    public Root() {
+    }
+
+    public Header getService_header() {
+        return service_header;
+    }
+
+    public void setService_header(Header service_header) {
         this.service_header = service_header;
+    }
+
+    public Body getService_body() {
+        return service_body;
+    }
+
+    public void setService_body(Body service_body) {
         this.service_body = service_body;
     }
 
