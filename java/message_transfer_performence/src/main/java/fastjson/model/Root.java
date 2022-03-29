@@ -1,6 +1,6 @@
 package fastjson.model;
 
-public class Root {
+public class Root im{
     Header service_header;
     Body service_body;
 
