@@ -1,4 +1,4 @@
-package fastjson.model;
+package json.model;
 
 import java.io.Serializable;
 

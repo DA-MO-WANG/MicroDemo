@@ -1,10 +1,7 @@
-package fastjson;
+package json;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import fastjson.model.Body;
-import fastjson.model.Header;
-import fastjson.model.Root;
+import json.model.Root;
 import util.FileUtil;
 
 public class FastJsonUtil {
