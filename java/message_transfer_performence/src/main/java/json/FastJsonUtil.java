@@ -20,6 +20,7 @@ public class FastJsonUtil {
         long l1 = System.currentTimeMillis();
         Root root = JSON.parseObject(json,Root.class);
         long l2 = System.currentTimeMillis();
+        System.out.print("fastjson耗时：");
         System.out.println(l2-l1);
 
         //Root root = JSON.
