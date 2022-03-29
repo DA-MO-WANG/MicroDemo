@@ -12,6 +12,7 @@ public class GsonUtil {
         Gson gson = new Gson();
         Root root = gson.fromJson(json,Root.class);
         long l2 = System.currentTimeMillis();
+        System.out.print("Gson耗时：");
         System.out.println(l2-l1);
     }
 }
