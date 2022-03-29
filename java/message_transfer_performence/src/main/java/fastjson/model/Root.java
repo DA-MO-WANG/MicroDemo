@@ -43,7 +43,7 @@ public class Root implements Serializable {
                 "    \"activity_no\": "+service_body.getActivity_no()+",\n" +
                 "    \"activity_name\": "+service_body.getActivity_name()+",\n" +
                 "    \"annual_fee\": "+service_body.getAnnual_fee() +
-                "  \n}" +
-                "}";
+                "     \n}" +
+                "\n}";
     }
 }
