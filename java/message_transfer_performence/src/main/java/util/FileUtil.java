@@ -3,20 +3,31 @@ package util;
 import java.io.*;
 
 public class FileUtil {
-    public static void readToBuffer(StringBuffer buffer,String filePath) {
+    public static String readToBuffer(StringBuffer buffer,String filePath) {
         String res = "";
+        BufferedReader reader = null;
+        InputStream is = null;
         try {
-            InputStream is = new FileInputStream(filePath);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            is = new FileInputStream(filePath);
+            reader = new BufferedReader(new InputStreamReader(is));
             res = reader.readLine();
             while (res != null) {
                buffer.append(res);
-               buffer.append("")
+               //buffer.append("")
+               res = reader.readLine();
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            try {
+                reader.close();
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return res;
         }
     }
 }
