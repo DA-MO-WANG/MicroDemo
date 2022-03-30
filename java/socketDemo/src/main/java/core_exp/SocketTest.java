@@ -1,6 +1,7 @@
 package core_exp;
 
 import java.io.IOException;
+import java.io.InterruptedIOException;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
@@ -25,7 +26,7 @@ public class SocketTest {
         } catch (UnknownHostException e) {
             e.printStackTrace();
             System.out.println(1111);
-        }catch (SocketTimeoutException e) {
+        }catch (InterruptedIOException e) {
             System.out.println(33333);
         }catch (IOException e) {
             e.printStackTrace();
