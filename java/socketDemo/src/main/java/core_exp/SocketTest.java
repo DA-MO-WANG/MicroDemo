@@ -2,9 +2,7 @@ package core_exp;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
+import java.net.*;
 import java.util.Scanner;
 
 public class SocketTest {
@@ -16,8 +14,8 @@ public class SocketTest {
         try {
             //所有的别人的响应信息都会放到socket的输入流
             //解析拿到别人给我们的信息
-            Socket s = new Socket("www.baidu.com", 8080);
-            s.setSoTimeout(20000);
+            Socket s = new Socket(String.valueOf(new InetSocketAddress("www.baidu.com", 8080)),2000);
+            //s.setSoTimeout(20000);
             Scanner in = new Scanner(s.getInputStream(), "utf-8");
             while (in.hasNextLine()) {
                 String line = in.nextLine();
