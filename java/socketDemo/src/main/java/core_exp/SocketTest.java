@@ -16,7 +16,7 @@ public class SocketTest {
             //所有的别人的响应信息都会放到socket的输入流
             //解析拿到别人给我们的信息
             Socket s = new Socket("time-a.nist.gov", 13);
-            s.setSoTimeout(2);
+            s.setSoTimeout(20);
             Scanner in = new Scanner(s.getInputStream(), "utf-8");
             while (in.hasNextLine()) {
                 String line = in.nextLine();
