@@ -2,8 +2,8 @@ package server;
 
 public class Main {
     public static void main(String[] args) {
-        int x = 12;
-        int fourthBitFromRight = x & 0b100;
+        int x = -8;
+        int fourthBitFromRight = (x & (1 << 3)) >>3 ;
         System.out.println(fourthBitFromRight);
 
     }
