@@ -5,5 +5,6 @@ public class Main {
         int x = 8;
         int fourthBitFromRight = (x & 0b1000) / 0b1000;
         System.out.println(fourthBitFromRight);
+        System.out.println(new Integer(x).byteValue());
     }
 }
