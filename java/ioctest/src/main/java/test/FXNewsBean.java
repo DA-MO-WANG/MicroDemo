@@ -1,2 +1,4 @@
-package test;public class FXNewsBean {
+package test;
+
+public class FXNewsBean {
 }
