@@ -17,8 +17,7 @@ public class FXNewsProviderTest extends TestCase{
     protected void testGetAndPersistNewsWithoutResourceAvailable() {
         try {
             newsProvider.getAndPersisNews();
-        }catch (FXNewsRetrieveFailureException e) {
-            e.getMessage().toString();
+        }catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
