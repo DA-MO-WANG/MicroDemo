@@ -1,14 +1,8 @@
 package test;
 
-public class IFXNewsListener {
-    String[] getAvaliableNewsIds() {
-        return null;
-    }
-    FXNewsBean getNewsByPK(String newsId) {
-        return null;
-    }
+public interface IFXNewsListener {
+    String[] getAvaliableNewsIds();
+    FXNewsBean getNewsByPK(String newsId);
 
-    void postProcessIfNecessary(String newsId) {
-
-    }
+    void postProcessIfNecessary(String newsId);
 }

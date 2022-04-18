@@ -1,7 +1,5 @@
 package test;
 
-public class IFXNewsPersister {
-    void persistNews(FXNewsBean fxNewsBean) {
-
-    }
+public interface IFXNewsPersister {
+    void persistNews(FXNewsBean fxNewsBean);
 }
