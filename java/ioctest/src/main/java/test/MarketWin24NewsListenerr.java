@@ -3,7 +3,7 @@ package test;
 public class MarketWin24NewsListenerr implements IFXNewsListener{
     @Override
     public String[] getAvaliableNewsIds() {
-        return new String[0];
+        throw new FXNewsRetrieveFailureException();
     }
 
     @Override
