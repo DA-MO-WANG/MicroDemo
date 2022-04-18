@@ -8,6 +8,12 @@ public class FXNewsProvider {
     }
     private IFXNewsListener newsListener;//抓取新闻内容
     private IFXNewsPersister newPersistener;//持久化抓取到的新闻
+
+    public FXNewsProvider(IFXNewsListener newsListener, IFXNewsPersister newPersistener) {
+        this.newsListener = newsListener;
+        this.newPersistener = newPersistener;
+    }
+
     public void getAndPersisNews() {
         String[] newsIds = newsListener.getAvaliableNewsIds();
         if (newsIds != null && newsIds.length > 0) {
@@ -18,5 +24,10 @@ public class FXNewsProvider {
             newPersistener.persistNews(newsBean);
             newsListener.postProcessIfNecessary(newsId);
         }
+    }
+
+    public static void main(String[] args) {
+        FXNewsProvider DowJonesNewsProvider = new FXNewsProvider(new DowJonesNewsListener(),new DowJonesNewsPersister());
+        FXNewsProvider marketWin24NewsProvider = new FXNewsProvider(new MarketWin24NewsListenerr(),new MarketWin24NewsPersister());
     }
 }
