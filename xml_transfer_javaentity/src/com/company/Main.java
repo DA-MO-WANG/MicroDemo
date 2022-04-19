@@ -43,7 +43,7 @@ public class Main {
         requestHeader.setChnlDate("20220902");
         requestHeader.setChnlTime("1010101001");
         requestHeader.setOpenId("2333333333333");
-        requestObj.setHeader(requestHeader);
+        requestObj.setHeaderr(requestHeader);
         requestObj.setBody(body);
         //LinkedList list = new LinkedList();
         //list.add(requestObj);

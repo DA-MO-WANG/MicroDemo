@@ -19,7 +19,7 @@ public class RequestInfo {
         return header;
     }
 
-    public void setHeader(JavaEntityHeader header) {
+    public void setHeaderr(JavaEntityHeader header) {
         this.header = header;
     }
 
