@@ -15,12 +15,12 @@ public class RequestInfo {
     @XmlElement(name = "RequestBody")
     private JavaEntityBody body;
 
-    public JavaEntityHeader getHeader() {
+    public JavaEntityHeader getHeaderr() {
         return header;
     }
 
-    public void setHeaderr(JavaEntityHeader header) {
-        this.header = header;
+    public void setHeaderr(JavaEntityHeader headerr) {
+        this.header = headerr;
     }
 
     public JavaEntityBody getBody() {
