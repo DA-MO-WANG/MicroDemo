@@ -19,8 +19,8 @@ public class RequestInfo {
         return header;
     }
 
-    public void setHeaderr(JavaEntityHeader headerr) {
-        this.header = headerr;
+    public void setHeader(JavaEntityHeader header) {
+        this.header = header;
     }
 
     public JavaEntityBody getBody() {
