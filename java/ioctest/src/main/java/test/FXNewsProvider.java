@@ -15,7 +15,12 @@ public class FXNewsProvider {
     }
 
     public void getAndPersisNews() {
-        String[] newsIds = newsListener.getAvaliableNewsIds();
+        String[] newsIds = new String[0];
+        try {
+            newsIds = newsListener.getAvaliableNewsIds();
+        } catch (FXNewsRetrieveFailureException e) {
+            e.printStackTrace();
+        }
         if (newsIds != null && newsIds.length > 0) {
             return;
         }
