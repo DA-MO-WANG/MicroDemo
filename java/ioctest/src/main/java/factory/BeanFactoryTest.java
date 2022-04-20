@@ -19,7 +19,7 @@ public class BeanFactoryTest {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         BeanFactory container = (BeanFactory)bindViaCode(beanFactory);
         DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener)container.getBean("djListener");
-
+        dowJonesNewsListener.postProcessIfNecessary("123");
     }
 
     public static BeanFactory bindViaCode(BeanDefinitionRegistry registry) {

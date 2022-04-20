@@ -13,6 +13,10 @@ public class DowJonesNewsListener implements IFXNewsListener{
 
     @Override
     public void postProcessIfNecessary(String newsId) {
+        print();
+    }
 
+    void print() {
+        System.out.println("123");
     }
 }
