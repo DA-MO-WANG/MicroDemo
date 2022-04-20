@@ -24,14 +24,16 @@ public class BeanFactoryTest {
     }
 
     public static BeanFactory bindViaCode(BeanDefinitionRegistry registry) {
+        //保管注册对象的各种信息的实例：类型信息
         AbstractBeanDefinition newsProvider = new RootBeanDefinition(FXNewsProvider.class,1,true);
         AbstractBeanDefinition newsListener = new RootBeanDefinition(DowJonesNewsListener.class,1,true);
         AbstractBeanDefinition newsPersister = new RootBeanDefinition(DowJonesNewsPersister.class,1,true);
-
+        //注册逻辑，把封装的beandefinition注册到管理注册的类里
         registry.registerBeanDefinition("djNewsProvider",newsProvider);
         registry.registerBeanDefinition("djListener",newsListener);
         registry.registerBeanDefinition("djPersister",newsPersister);
 
+        //构造器注入
         ConstructorArgumentValues argValue = new ConstructorArgumentValues();
         argValue.addIndexedArgumentValue(0,newsListener);
         argValue.addIndexedArgumentValue(1,newsPersister);
