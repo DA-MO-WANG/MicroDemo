@@ -8,6 +8,7 @@ import test.DowJonesNewsListener;
 
 public class XmlBeanFactory {
     public static void main(String[] args) {
+        //创建一个负责bean注册管理的对象
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         BeanFactory container = (BeanFactory)bindViaXMLFile(beanFactory);
         DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener)container.getBean("djNewsListener");
@@ -16,6 +17,7 @@ public class XmlBeanFactory {
     }
 
     public static BeanFactory bindViaXMLFile(BeanDefinitionRegistry registry) {
+        //
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
         reader.loadBeanDefinitions("news-config.xml");
         return (BeanFactory)registry;
