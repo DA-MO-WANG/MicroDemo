@@ -11,12 +11,15 @@ import org.springframework.beans.factory.support.RootBeanDefinition;
 import test.DowJonesNewsListener;
 import test.DowJonesNewsPersister;
 import test.FXNewsProvider;
+import test.IFXNewsListener;
 
 public class BeanFactoryTest {
 
     public static void main(String[] args) {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         BeanFactory container = (BeanFactory)bindViaCode(beanFactory);
+        DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener)container.getBean("djListener");
+
     }
 
     public static BeanFactory bindViaCode(BeanDefinitionRegistry registry) {
