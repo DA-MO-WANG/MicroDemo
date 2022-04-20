@@ -17,6 +17,7 @@ public class XmlBeanFactory {
 
     public static BeanFactory bindViaXMLFile(BeanDefinitionRegistry registry) {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
-        reader.loadBeanDefinitions("")
+        reader.loadBeanDefinitions("../news-config.xml");
+        return 
     }
 }
