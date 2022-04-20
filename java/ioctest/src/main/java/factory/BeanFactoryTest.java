@@ -11,7 +11,6 @@ import org.springframework.beans.factory.support.RootBeanDefinition;
 import test.DowJonesNewsListener;
 import test.DowJonesNewsPersister;
 import test.FXNewsProvider;
-import test.IFXNewsListener;
 
 public class BeanFactoryTest {
 
