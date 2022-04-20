@@ -21,6 +21,7 @@ public class FXNewsProvider {
     }
 
     public void getAndPersisNews() {
+        System.out.println("111111");
         String[] newsIds = new String[0];
         try {
             newsIds = newsListener.getAvaliableNewsIds();
