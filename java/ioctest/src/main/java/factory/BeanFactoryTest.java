@@ -15,7 +15,7 @@ public class BeanFactoryTest {
     }
 
     public static BeanFactory bindViaCode(BeanDefinitionRegistry registry) {
-        AbstractBeanDefinition newsProvider = new RootBeanDefinition(FXNewsProvider.class,true)
+        AbstractBeanDefinition newsProvider = new RootBeanDefinition(FXNewsProvider.class,true);
     }
 
 }
