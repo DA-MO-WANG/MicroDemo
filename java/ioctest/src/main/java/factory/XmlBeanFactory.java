@@ -3,6 +3,7 @@ package factory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import test.DowJonesNewsListener;
 
 public class XmlBeanFactory {
@@ -15,6 +16,7 @@ public class XmlBeanFactory {
     }
 
     public static BeanFactory bindViaXMLFile(BeanDefinitionRegistry registry) {
-        
+        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
+        reader.loadBeanDefinitions("")
     }
 }
