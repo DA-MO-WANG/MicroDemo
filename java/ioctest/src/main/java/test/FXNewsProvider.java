@@ -1,5 +1,5 @@
 package test;
-
+@Component
 public class FXNewsProvider {
 
     {
