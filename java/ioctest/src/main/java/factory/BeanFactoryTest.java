@@ -16,6 +16,7 @@ import test.IFXNewsListener;
 public class BeanFactoryTest {
 
     public static void main(String[] args) {
+        //具体负责对象注册和管理的实现类--BeanFactory接口的实现类
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         BeanFactory container = (BeanFactory)bindViaCode(beanFactory);
         DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener)container.getBean("djListener");
