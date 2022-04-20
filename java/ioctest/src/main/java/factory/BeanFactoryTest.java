@@ -30,7 +30,7 @@ public class BeanFactoryTest {
         ConstructorArgumentValues argValue = new ConstructorArgumentValues();
         argValue.addIndexedArgumentValue(0,newsListener);
         argValue.addIndexedArgumentValue(1,newsPersister);
-
+        newsProvider.se
 
     }
 
