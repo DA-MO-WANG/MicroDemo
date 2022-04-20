@@ -10,14 +10,14 @@ public class XmlBeanFactory {
     public static void main(String[] args) {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         BeanFactory container = (BeanFactory)bindViaXMLFile(beanFactory);
-        DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener)container.getBean("djListener");
+        DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener)container.getBean("djNewsListener");
         dowJonesNewsListener.postProcessIfNecessary("123");
 
     }
 
     public static BeanFactory bindViaXMLFile(BeanDefinitionRegistry registry) {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
-        reader.loadBeanDefinitions("../news-config.xml");
+        reader.loadBeanDefinitions("news-config.xml");
         return (BeanFactory)registry;
     }
 }
