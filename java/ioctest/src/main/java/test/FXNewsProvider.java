@@ -1,4 +1,8 @@
 package test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 @Component
 public class FXNewsProvider {
 
@@ -6,7 +10,9 @@ public class FXNewsProvider {
         newsListener = new DowJonesNewsListener();
         newPersistener = new DowJonesNewsPersister();
     }
+    @Autowired
     private IFXNewsListener newsListener;//抓取新闻内容
+    @Autowired
     private IFXNewsPersister newPersistener;//持久化抓取到的新闻
 
     public FXNewsProvider(IFXNewsListener newsListener, IFXNewsPersister newPersistener) {
