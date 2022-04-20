@@ -17,8 +17,9 @@ public class XmlBeanFactory {
     }
 
     public static BeanFactory bindViaXMLFile(BeanDefinitionRegistry registry) {
-        //
+        //BeanDefinitionReader实现
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
+        //把读取到的xml内容映射到
         reader.loadBeanDefinitions("news-config.xml");
         return (BeanFactory)registry;
     }
