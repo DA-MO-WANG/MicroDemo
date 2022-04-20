@@ -1,5 +1,6 @@
 package factory;
 
+
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
@@ -29,7 +30,7 @@ public class BeanFactoryTest {
         ConstructorArgumentValues argValue = new ConstructorArgumentValues();
         argValue.addIndexedArgumentValue(0,newsListener);
         argValue.addIndexedArgumentValue(1,newsPersister);
-        newsProvider.set
+
 
     }
 
