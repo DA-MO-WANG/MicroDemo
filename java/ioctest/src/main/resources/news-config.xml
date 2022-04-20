@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="djNewsProvider" class="test/FXNewsProvider.java">
+    <bean id="djNewsProvider" class="..FXNewsProvider">
         <constructor-arg index="0">
             <ref bean="djNewsListener"/>
         </constructor-arg>
