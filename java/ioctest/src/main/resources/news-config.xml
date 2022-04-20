@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="djNewsProvider" class="..FXNewsProvider">
+    <bean id="djNewsProvider" class="test.FXNewsProvider">
         <constructor-arg index="0">
             <ref bean="djNewsListener"/>
         </constructor-arg>
@@ -12,8 +12,8 @@
             <ref bean="djNewsPersister"/>
         </constructor-arg>
     </bean>
-    <bean id="djNewsListener" class="..impl.DowJonesNewsListener">
+    <bean id="djNewsListener" class="test.DowJonesNewsListener">
     </bean>
-    <bean id="djNewsPersister" class="..impl.DowJonesNewsPersister">
+    <bean id="djNewsPersister" class="test.DowJonesNewsPersister">
     </bean>
 </beans>
