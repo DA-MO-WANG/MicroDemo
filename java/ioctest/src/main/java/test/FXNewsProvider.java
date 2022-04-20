@@ -20,6 +20,22 @@ public class FXNewsProvider {
         this.newPersistener = newPersistener;
     }
 
+    public IFXNewsListener getNewsListener() {
+        return newsListener;
+    }
+
+    public void setNewsListener(IFXNewsListener newsListener) {
+        this.newsListener = newsListener;
+    }
+
+    public IFXNewsPersister getNewPersistener() {
+        return newPersistener;
+    }
+
+    public void setNewPersistener(IFXNewsPersister newPersistener) {
+        this.newPersistener = newPersistener;
+    }
+
     public void getAndPersisNews() {
         System.out.println("111111");
         String[] newsIds = new String[0];
