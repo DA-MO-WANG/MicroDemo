@@ -13,5 +13,7 @@ public class AnnotationBeanFactory {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("anonation-config.xml");
         FXNewsProvider newsProvider = (FXNewsProvider)ctx.getBean("FXNewsProvider");
         newsProvider.getAndPersisNews();
+
+        
     }
 }
