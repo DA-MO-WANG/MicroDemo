@@ -14,6 +14,6 @@ public class AnnotationBeanFactory {
         FXNewsProvider newsProvider = (FXNewsProvider)ctx.getBean("FXNewsProvider");
         newsProvider.getAndPersisNews();
 
-        
+        org.springframework.beans.factory.support.AbstractBeanFactory
     }
 }
