@@ -15,5 +15,7 @@ public class AnnotationBeanFactory {
         newsProvider.getAndPersisNews();
 
         org.springframework.beans.factory.support.AbstractBeanFactory
+        org.springframework.beans.
+                factory.support.AbstractAutowireCapableBeanFactory
     }
 }
