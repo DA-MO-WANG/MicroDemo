@@ -5,6 +5,8 @@ import java.util.Arrays;
 class DynamicFieldsException extends Exception {
 
 }
+
+
 public class DynamicFields {
     private Object[][] fields;
     public DynamicFields(int initialSize) {
