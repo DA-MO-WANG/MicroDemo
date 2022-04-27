@@ -9,7 +9,7 @@ public class Main {
     class BaseException extends Exception {}
     class DerivedException extends BaseException {}
 
-    void catcher() throws DerivedException {
+    void catcher() throws BaseException {
         try {
             throw new DerivedException();
         }catch (BaseException e) {
@@ -21,7 +21,7 @@ public class Main {
         Main main = new Main();
         try {
             main.catcher();
-        } catch (DerivedException e) {
+        } catch (BaseException e) {
             e.printStackTrace();
         }
     }
