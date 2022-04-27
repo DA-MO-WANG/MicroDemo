@@ -39,10 +39,13 @@ public class OnOffSwitch {
     private static Switch sw = new Switch();
     public static void f() throws OnOffException1, OnOffException2 {}
     public static void main(String[] args) {
+        //思路：利用异常来控制一段代码的跳出；利用循环来反复调用；循环次数来控制调用的次数
+        //finally 和 循环中的break配合，可以达到控制调用次数的目的
         while (count >= 0) {
             try {
-                //
-                //Thread.currentThread().join(3000 * 60 * 60);
+                //等待调用这个方法的线程完成
+                Thread.currentThread().join(3000 * 60 * 60);
+                // 等待3s时间
                 TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
