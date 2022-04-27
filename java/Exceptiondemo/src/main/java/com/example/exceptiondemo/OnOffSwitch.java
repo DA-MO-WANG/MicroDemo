@@ -38,7 +38,11 @@ public class OnOffSwitch {
     public static void f() throws OnOffException1, OnOffException2 {}
     public static void main(String[] args) {
         while (count >= 0) {
-            System.
+            try {
+                Thread.currentThread().wait(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             try {
                 sw.on();
                 count--;
