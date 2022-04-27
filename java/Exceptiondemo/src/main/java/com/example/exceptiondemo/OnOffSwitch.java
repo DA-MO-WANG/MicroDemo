@@ -1,5 +1,7 @@
 package com.example.exceptiondemo;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Description TO DO
  * @Classname Switch
@@ -40,7 +42,8 @@ public class OnOffSwitch {
         while (count >= 0) {
             try {
                 //
-                Thread.currentThread().join(3000 * 60 * 60);
+                //Thread.currentThread().join(3000 * 60 * 60);
+                TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
