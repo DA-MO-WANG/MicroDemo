@@ -95,6 +95,6 @@ public class DynamicFields {
             Object field = df.setField("d",null);
         } catch (NoSuchFieldException | DynamicFieldsException e) {
             e.printStackTrace(System.out);
-        } 
+        }
     }
 }
