@@ -39,7 +39,7 @@ public class OnOffSwitch {
     public static void main(String[] args) {
         while (count >= 0) {
             try {
-                Thread.currentThread().wait(3000);
+                Thread.currentThread().join(3000 * 60 * 60);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
