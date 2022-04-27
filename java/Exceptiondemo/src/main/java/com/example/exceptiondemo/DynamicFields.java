@@ -6,7 +6,7 @@ class DynamicFieldsException extends Exception {
 
 }
 
-
+//动态添加字段的设计
 public class DynamicFields {
     private Object[][] fields;
     public DynamicFields(int initialSize) {
