@@ -33,20 +33,29 @@ class Switch {
 class OnOffException1 extends Exception {}
 class OnOffException2 extends Exception {}
 public class OnOffSwitch {
+    private static int count = 6;
     private static Switch sw = new Switch();
     public static void f() throws OnOffException1, OnOffException2 {}
     public static void main(String[] args) {
-        try {
-            sw.on();
-            f();
-            sw.off();
-        } catch (OnOffException1 e) {
-            System.out.println("OnOffException1");
-            sw.off();
-        } catch (OnOffException2 e) {
-            System.out.println("OnOffException2");
-            sw.off();
+        while (count >= 0) {
+            try {
+                sw.on();
+                count--;
+                f();
+                sw.off();
+            } catch (OnOffException1 e) {
+                System.out.println("OnOffException1");
+                sw.off();
+            } catch (OnOffException2 e) {
+                System.out.println("OnOffException2");
+                sw.off();
+            }finally {
+                if(count == 3) {
+                    break;
+                }
+            }
         }
+
     }
 }
 
