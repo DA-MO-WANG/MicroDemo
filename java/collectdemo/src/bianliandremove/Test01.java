@@ -28,6 +28,5 @@ public class Test01 {
 //        System.out.println(list.size());
         Double d = 12.2;
         System.out.println(d+"");
-        56350065
     }
 }
