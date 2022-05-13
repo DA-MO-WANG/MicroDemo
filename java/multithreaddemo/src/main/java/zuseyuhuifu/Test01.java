@@ -10,10 +10,17 @@ package zuseyuhuifu;
 public class Test01 {
     static int x = 10;
     public static void main(String[] args) {
+        Thread thread = Thread.currentThread();
+        try {
+            thread.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         if (x == 20) {
-            System.out.println(1000000000);
+            thread.notify();
         }
+        System.out.println(1111111);
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
