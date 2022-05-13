@@ -9,26 +9,31 @@ package zuseyuhuifu;
  */
 public class Test01 {
     static int x = 10;
+    static long id = 0;
     public static void main(String[] args) {
-        Thread thread = Thread.currentThread();
-        try {
-            thread.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        if (x == 20) {
-            thread.notify();
-        }
-        System.out.println(1111111);
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                x = 20;
+                Thread thread = Thread.currentThread();
+                id = thread.getId();
+                try {
+
+                    if(x == 10)  thread.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
         thread1.start();
+
+        Thread thread = Thread.currentThread();
+        try {
+            thread.wait(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Thread.
 
     }
 }
