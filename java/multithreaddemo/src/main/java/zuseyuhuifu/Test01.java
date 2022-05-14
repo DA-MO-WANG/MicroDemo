@@ -33,7 +33,6 @@ public class Test01 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Thread.
 
     }
 }
