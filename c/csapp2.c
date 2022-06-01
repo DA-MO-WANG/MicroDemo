@@ -1,3 +1,4 @@
+#include <stdio.h>
 typedef struct {
 	int a[2];
 	double d;
@@ -11,5 +12,5 @@ double function(i) {
 }
 
 int  main(void) {
-	printf("%d\n", function(1));
+	printf("%f\n", function(1));
 }
