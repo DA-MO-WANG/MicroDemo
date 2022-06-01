@@ -12,5 +12,5 @@ double function(i) {
 }
 
 int  main(void) {
-	printf("%f\n", function(3));
+	printf("%f\n", function(4));
 }
