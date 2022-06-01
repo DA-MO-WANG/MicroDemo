@@ -9,3 +9,7 @@ double function(i) {
 	s.a[i] = 1073442324;
 	return s.d;
 }
+
+int  main(void) {
+	printf("%d\n", function(1));
+}
