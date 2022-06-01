@@ -11,6 +11,6 @@ double function(i) {
 	return s.d;
 }
 
-int  main(args) {
-	printf("%f\n", function(1));
+int  main(void) {
+	printf("%f\n", function(3));
 }
