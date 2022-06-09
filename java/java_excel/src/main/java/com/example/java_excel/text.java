@@ -55,7 +55,6 @@ import org.junit.Test;
  * @Created by richheart
  * Copyright (c) All Rights Reserved, 2022.
  */
-@Ignore
 public class WriteTest {
 
     /**
