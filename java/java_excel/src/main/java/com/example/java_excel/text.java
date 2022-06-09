@@ -1,99 +1,59 @@
 package com.example.java_excel;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import com.alibaba.easyexcel.test.util.TestFileUtil;
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelWriter;
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.annotation.format.DateTimeFormat;
+import com.alibaba.excel.annotation.format.NumberFormat;
+import com.alibaba.excel.annotation.write.style.ColumnWidth;
+import com.alibaba.excel.annotation.write.style.ContentRowHeight;
+import com.alibaba.excel.annotation.write.style.HeadRowHeight;
+import com.alibaba.excel.enums.CellDataTypeEnum;
+import com.alibaba.excel.metadata.data.CommentData;
+import com.alibaba.excel.metadata.data.FormulaData;
+import com.alibaba.excel.metadata.data.HyperlinkData;
+import com.alibaba.excel.metadata.data.HyperlinkData.HyperlinkType;
+import com.alibaba.excel.metadata.data.ImageData;
+import com.alibaba.excel.metadata.data.ImageData.ImageType;
+import com.alibaba.excel.metadata.data.RichTextStringData;
+import com.alibaba.excel.metadata.data.WriteCellData;
+import com.alibaba.excel.util.BooleanUtils;
+import com.alibaba.excel.util.FileUtils;
+import com.alibaba.excel.util.ListUtils;
+import com.alibaba.excel.write.handler.CellWriteHandler;
+import com.alibaba.excel.write.handler.context.CellWriteHandlerContext;
+import com.alibaba.excel.write.merge.LoopMergeStrategy;
+import com.alibaba.excel.write.metadata.WriteSheet;
+import com.alibaba.excel.write.metadata.WriteTable;
+import com.alibaba.excel.write.metadata.style.WriteCellStyle;
+import com.alibaba.excel.write.metadata.style.WriteFont;
+import com.alibaba.excel.write.style.HorizontalCellStyleStrategy;
+import com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.streaming.SXSSFSheet;
+import org.junit.Ignore;
+import org.junit.Test;
 /**
  * @Description TO DO
  * @Classname text
  * @Date 2022/6/9 14:54
  * @Created by richheart
  * Copyright (c) All Rights Reserved, 2022.
- */
-Skip to content
-        Product
-        Team
-        Enterprise
-        Explore
-        Marketplace
-        Pricing
-        Search
-        Sign in
-        Sign up
-        alibaba
-        /
-        easyexcel
-        Public
-        Code
-        Issues
-        74
-        Pull requests
-        34
-        Actions
-        Projects
-        Wiki
-        Security
-        Insights
-        easyexcel/easyexcel-test/src/test/java/com/alibaba/easyexcel/test/demo/write/WriteTest.java /
-@zhuangjiaju
-zhuangjiaju 删除多余案例
-        Latest commit 0e546c3 8 days ago
-        History
-        1 contributor
-        764 lines (708 sloc)  36.1 KB
-
-        package com.alibaba.easyexcel.test.demo.write;
-
-        import java.io.File;
-        import java.io.InputStream;
-        import java.net.URL;
-        import java.util.ArrayList;
-        import java.util.Date;
-        import java.util.HashSet;
-        import java.util.List;
-        import java.util.Set;
-
-        import com.alibaba.easyexcel.test.util.TestFileUtil;
-        import com.alibaba.excel.EasyExcel;
-        import com.alibaba.excel.ExcelWriter;
-        import com.alibaba.excel.annotation.ExcelProperty;
-        import com.alibaba.excel.annotation.format.DateTimeFormat;
-        import com.alibaba.excel.annotation.format.NumberFormat;
-        import com.alibaba.excel.annotation.write.style.ColumnWidth;
-        import com.alibaba.excel.annotation.write.style.ContentRowHeight;
-        import com.alibaba.excel.annotation.write.style.HeadRowHeight;
-        import com.alibaba.excel.enums.CellDataTypeEnum;
-        import com.alibaba.excel.metadata.data.CommentData;
-        import com.alibaba.excel.metadata.data.FormulaData;
-        import com.alibaba.excel.metadata.data.HyperlinkData;
-        import com.alibaba.excel.metadata.data.HyperlinkData.HyperlinkType;
-        import com.alibaba.excel.metadata.data.ImageData;
-        import com.alibaba.excel.metadata.data.ImageData.ImageType;
-        import com.alibaba.excel.metadata.data.RichTextStringData;
-        import com.alibaba.excel.metadata.data.WriteCellData;
-        import com.alibaba.excel.util.BooleanUtils;
-        import com.alibaba.excel.util.FileUtils;
-        import com.alibaba.excel.util.ListUtils;
-        import com.alibaba.excel.write.handler.CellWriteHandler;
-        import com.alibaba.excel.write.handler.context.CellWriteHandlerContext;
-        import com.alibaba.excel.write.merge.LoopMergeStrategy;
-        import com.alibaba.excel.write.metadata.WriteSheet;
-        import com.alibaba.excel.write.metadata.WriteTable;
-        import com.alibaba.excel.write.metadata.style.WriteCellStyle;
-        import com.alibaba.excel.write.metadata.style.WriteFont;
-        import com.alibaba.excel.write.style.HorizontalCellStyleStrategy;
-        import com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;
-
-        import org.apache.poi.ss.usermodel.Cell;
-        import org.apache.poi.ss.usermodel.CellStyle;
-        import org.apache.poi.ss.usermodel.FillPatternType;
-        import org.apache.poi.ss.usermodel.IndexedColors;
-        import org.apache.poi.ss.usermodel.Workbook;
-        import org.apache.poi.xssf.streaming.SXSSFSheet;
-        import org.junit.Ignore;
-        import org.junit.Test;
-
-/**
- * 写的常见写法
- *
- * @author Jiaju Zhuang
  */
 @Ignore
 public class WriteTest {
@@ -105,7 +65,6 @@ public class WriteTest {
      * <p>
      * 2. 直接写即可
      */
-    @Test
     public void simpleWrite() {
         // 注意 simpleWrite在数据量不大的情况下可以使用（5000以内，具体也要看实际情况），数据量大参照 重复多次写入
 
@@ -147,7 +106,6 @@ public class WriteTest {
      *
      * @since 2.1.1
      */
-    @Test
     public void excludeOrIncludeWrite() {
         String fileName = TestFileUtil.getPath() + "excludeOrIncludeWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里需要注意 在使用ExcelProperty注解的使用，如果想不空列则需要加入order字段，而不是index,order会忽略空列，然后继续往后，而index，不会忽略空列，在第几列就是第几列。
@@ -177,7 +135,6 @@ public class WriteTest {
      * <p>
      * 3. 直接写即可
      */
-    @Test
     public void indexWrite() {
         String fileName = TestFileUtil.getPath() + "indexWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -193,7 +150,7 @@ public class WriteTest {
      * <p>
      * 3. 直接写即可
      */
-    @Test
+
     public void complexHeadWrite() {
         String fileName = TestFileUtil.getPath() + "complexHeadWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -209,7 +166,7 @@ public class WriteTest {
      * <p>
      * 3. 直接调用二次写入即可
      */
-    @Test
+
     public void repeatedWrite() {
         // 方法1: 如果写到同一个sheet
         String fileName = TestFileUtil.getPath() + "repeatedWrite" + System.currentTimeMillis() + ".xlsx";
@@ -265,7 +222,7 @@ public class WriteTest {
      * <p>
      * 3. 直接写即可
      */
-    @Test
+
     public void converterWrite() {
         String fileName = TestFileUtil.getPath() + "converterWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -279,7 +236,7 @@ public class WriteTest {
      * <p>
      * 2. 直接写即可
      */
-    @Test
+
     public void imageWrite() throws Exception {
         String fileName = TestFileUtil.getPath() + "imageWrite" + System.currentTimeMillis() + ".xlsx";
 
@@ -357,7 +314,7 @@ public class WriteTest {
      *
      * @since 3.0.0-beta1
      */
-    @Test
+
     public void writeCellDataWrite() {
         String fileName = TestFileUtil.getPath() + "writeCellDataWrite" + System.currentTimeMillis() + ".xlsx";
         WriteCellDemoData writeCellDemoData = new WriteCellDemoData();
@@ -433,7 +390,7 @@ public class WriteTest {
      * <p>
      * 4. 直接写即可
      */
-    @Test
+
     public void templateWrite() {
         String templateFileName = TestFileUtil.getPath() + "demo" + File.separator + "demo.xlsx";
         String fileName = TestFileUtil.getPath() + "templateWrite" + System.currentTimeMillis() + ".xlsx";
@@ -450,7 +407,7 @@ public class WriteTest {
      * <p>
      * 3. 直接写即可
      */
-    @Test
+
     public void widthAndHeightWrite() {
         String fileName = TestFileUtil.getPath() + "widthAndHeightWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -466,7 +423,7 @@ public class WriteTest {
      *
      * @since 2.2.0-beta1
      */
-    @Test
+
     public void annotationStyleWrite() {
         String fileName = TestFileUtil.getPath() + "annotationStyleWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -482,7 +439,7 @@ public class WriteTest {
      * <p>
      * 3. 直接写即可
      */
-    @Test
+
     public void handlerStyleWrite() {
         // 方法1 使用已有的策略 推荐
         // HorizontalCellStyleStrategy 每一行的样式都一样 或者隔行一样
@@ -588,7 +545,7 @@ public class WriteTest {
      *
      * @since 2.2.0-beta1
      */
-    @Test
+
     public void mergeWrite() {
         // 方法1 注解
         String fileName = TestFileUtil.getPath() + "mergeWrite" + System.currentTimeMillis() + ".xlsx";
@@ -611,7 +568,7 @@ public class WriteTest {
      * <p>
      * 2. 然后写入table即可
      */
-    @Test
+
     public void tableWrite() {
         String fileName = TestFileUtil.getPath() + "tableWrite" + System.currentTimeMillis() + ".xlsx";
         // 方法1 这里直接写多个table的案例了，如果只有一个 也可以直一行代码搞定，参照其他案
@@ -639,7 +596,7 @@ public class WriteTest {
      * <p>
      * 2. 然后写入table即可
      */
-    @Test
+
     public void dynamicHeadWrite() {
         String fileName = TestFileUtil.getPath() + "dynamicHeadWrite" + System.currentTimeMillis() + ".xlsx";
         EasyExcel.write(fileName)
@@ -664,7 +621,7 @@ public class WriteTest {
      * <p>
      * 3. 直接写即可
      */
-    @Test
+
     public void longestMatchColumnWidthWrite() {
         String fileName =
                 TestFileUtil.getPath() + "longestMatchColumnWidthWrite" + System.currentTimeMillis() + ".xlsx";
@@ -684,7 +641,7 @@ public class WriteTest {
      * <p>
      * 2. 直接写即可
      */
-    @Test
+
     public void customHandlerWrite() {
         String fileName = TestFileUtil.getPath() + "customHandlerWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -701,7 +658,7 @@ public class WriteTest {
      * <p>
      * 2. 直接写即可
      */
-    @Test
+
     public void commentWrite() {
         String fileName = TestFileUtil.getPath() + "commentWrite" + System.currentTimeMillis() + ".xlsx";
         // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
@@ -719,7 +676,7 @@ public class WriteTest {
      * <p>
      * 2. 直接写即可
      */
-    @Test
+
     public void variableTitleWrite() {
         // 写法1
         String fileName = TestFileUtil.getPath() + "variableTitleWrite" + System.currentTimeMillis() + ".xlsx";
@@ -730,7 +687,7 @@ public class WriteTest {
     /**
      * 不创建对象的写
      */
-    @Test
+
     public void noModelWrite() {
         // 写法1
         String fileName = TestFileUtil.getPath() + "noModelWrite" + System.currentTimeMillis() + ".xlsx";
@@ -803,15 +760,3 @@ public class WriteTest {
     }
 
 }
-© 2022 GitHub, Inc.
-        Terms
-        Privacy
-        Security
-        Status
-        Docs
-        Contact GitHub
-        Pricing
-        API
-        Training
-        Blog
-        About
