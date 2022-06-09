@@ -1,0 +1,127 @@
+<Activate_Additional_Details>
+
+    <Application_Number>2000221020102</Application_Number>
+
+    <Auto_Payment_RMB_Debit_Card_Number>1111111</Auto_Payment_RMB_Debit_Card_Number>
+
+    <Auto_Payment_RMB_Method>自动扣款方式</Auto_Payment_RMB_Method>
+
+    <Auto_Payment_USD_Auto_Exchange>自动还款</Auto_Payment_USD_Auto_Exchange>
+
+    <Auto_Payment_USD_Auto_Exchange_Method>自动还款方式</Auto_Payment_USD_Auto_Exchange_Method>
+
+    <Auto_Payment_USD_Debit_Card_Number>外币自动扣款账号</Auto_Payment_USD_Debit_Card_Number>
+
+    <Auto_Payment_USD_Method>外币自动扣款方式</Auto_Payment_USD_Method>
+
+    <Billing_Day>账单日</Billing_Day>
+
+    <Branch>卡片分属行</Branch>
+
+    <Campaign_Code>专案代码</Campaign_Code>
+
+    <Card_Embossing_Code_Primary>主卡卡片面代码</Card_Embossing_Code_Primary>
+
+    <CoBrand_Card_Member_Number>公司凸字</CoBrand_Card_Member_Number>
+
+    <Contact_Person_Mobile>联系人1手机</Contact_Person_Mobile>
+
+    <Contact_Person_Name>联系人姓名</Contact_Person_Name>
+
+    <Contact_Person_Phone_Area_Code>联系人1区号</Contact_Person_Phone_Area_Code>
+
+    <Contact_Person_Phone_Number>联系人电话</Contact_Person_Phone_Number>
+
+    <Contact_Person_Relationship>联系人1关系</Contact_Person_Relationship>
+
+    <Downgrade_Card_Type>降级的产品编号</Downgrade_Card_Type>
+
+    <Entry_Source>进件来源</Entry_Source>
+
+    <Group_Sale_Case_Code>申请团办编号</Group_Sale_Case_Code>
+
+    <ID_Card_Code>主卡个性标识嘛</ID_Card_Code>
+
+    <Info_About_CC_Ownership_Flag>werq</Info_About_CC_Ownership_Flag>
+
+    <Info_About_CC_Ownership_Highest_CR_Limit>0</Info_About_CC_Ownership_Highest_CR_Limit>
+
+    <Need_SMS_Primary>werqwe</Need_SMS_Primary>
+
+    <PDCard_PA_Business_Mobile>ewrwe</PDCard_PA_Business_Mobile>
+
+    <PDCard_PA_Business_Tel>rwerew</PDCard_PA_Business_Tel>
+
+    <PDCard_PA_Business_Tel_Ext>wer</PDCard_PA_Business_Tel_Ext>
+
+    <PDCard_PA_Company_Department>wer</PDCard_PA_Company_Department>
+
+    <PDCard_PA_Company_Name>321312</PDCard_PA_Company_Name>
+
+    <PDCard_PA_DOB>2022-06-09T13:59:34</PDCard_PA_DOB>
+
+    <PDCard_PA_Home_Tel>11</PDCard_PA_Home_Tel>
+
+    <PDCard_PA_Home_Tel_Area_Code>322</PDCard_PA_Home_Tel_Area_Code>
+
+    <PDCard_PA_ID_No>123</PDCard_PA_ID_No>
+
+    <PDCard_PA_ID_Type>2324</PDCard_PA_ID_Type>
+
+    <PDCard_PA_ID_Type_Name>223</PDCard_PA_ID_Type_Name>
+
+    <PDCard_PA_Marital_Status>454</PDCard_PA_Marital_Status>
+
+    <PDCard_PA_Sex>23423</PDCard_PA_Sex>
+
+    <Permit_To_Downgrade>0</Permit_To_Downgrade>
+
+    <Primary_Cards_Authentication_Method>0</Primary_Cards_Authentication_Method>
+
+    <Primary_Embossing_Name>23432</Primary_Embossing_Name>
+
+    <Referral_Credit_Card>435</Referral_Credit_Card>
+    y
+    <Referral_Name>12321</Referral_Name>
+
+    <Relationship_Between_CMBC_And_Applicant>32423</Relationship_Between_CMBC_And_Applicant>
+
+    <Road_Aid_Fee_Level>23423</Road_Aid_Fee_Level>
+
+    <Road_Aid_Service_Level>32423</Road_Aid_Service_Level>
+
+    <Sales_Organisation_Code>234</Sales_Organisation_Code>
+
+    <Sales_Source>786</Sales_Source>
+
+    <Salesman_Method>454</Salesman_Method>
+
+    <Salesman_Name>32423</Salesman_Name>
+
+    <Salesman_Number>234</Salesman_Number>
+
+    <Salesman_Phone_Number>32</Salesman_Phone_Number>
+
+    <Statement_Delivery_Method>344</Statement_Delivery_Method>
+
+    <Vehicle_Plate_Number>22</Vehicle_Plate_Number>
+
+    <PDCard_PA_PrimaryServiceCode>3</PDCard_PA_PrimaryServiceCode>
+
+    <PDCard_PA_SupServiceCode>81</PDCard_PA_SupServiceCode>
+
+    <Salesman_Rank>7</Salesman_Rank>
+
+    <Coowner_Name_1>6</Coowner_Name_1>
+
+    <Coowner_Id_1>5</Coowner_Id_1>
+
+    <Coowner_Name_2>4</Coowner_Name_2>
+
+    <Coowner_Id_2>3</Coowner_Id_2>
+
+    <Referral_Mobile>2</Referral_Mobile>
+
+    <Merchant_NO>1</Merchant_NO>
+
+</Activate_Additional_Details>
