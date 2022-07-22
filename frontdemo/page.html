@@ -78,6 +78,7 @@
     <!-- 加载音视频资源 -->
     <audio controls src="/audios/03 IN MY ARMS TONIGHT (Original Karaoke).m4a"></audio>
     <!-- 音视频第二种写法: 备胎写法，audio-source父子嵌套标签 type属性 -->
+    <!-- 除了controls属性，还有其他属性 比如autoplay 具体参考mdn文档-->
     <audio controls>
         <source src="11111" type="audio/mpeg">
         <source src="/audios/01 眠れない夜を抱いて.m4a" type="audio/mpeg">
@@ -94,7 +95,7 @@
     <!-- 第一种写法：站外跳转 -->
     </br>
     <a href="https://www.acwing.com">Acwing</a>
-    <a href="/second.html">站内跳转</a>
+    <a href="/second.html" target="_blank">站内跳转</a>
 
 
 </body>
