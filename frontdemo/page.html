@@ -99,8 +99,9 @@
     <!-- target：_blank 在新空白页开启页面 -->
     <a href="/second.html" target="_blank">站内跳转</a>
     <!-- form表单元素 -->
-    <form action="">
+    <form action="/second.html">
         <!-- label和input是绑定的，for与id是一致的；name是传给后端需要的 -->
+        <!-- 属性：maxlength\required\placeholder -->
         <label for="username">用户名</label>
         <input type="text" maxlength="5" minlength="2" name="username" id="username">
 
@@ -112,12 +113,16 @@
         <input type="password" name="pwd" id="pwd">
         <br>
         <label for="email">电子邮件</label>
-        <input type="email" name="email" id="email">
+        <input type="email" required name="email" id="email">
         <br>
+        <!-- radio 同一个name下代表同一组，只能选一个 -->
         <label for="cpp">cpp</label>
         <input type="radio" name="lang" id="cpp">
         <label for="java">java</label>
         <input type="radio" name="lang" id="java">
+
+        <br>
+        <button type="submit">提交</button>
     </form>
 
 </body>
