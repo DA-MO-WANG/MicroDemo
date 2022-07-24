@@ -94,10 +94,30 @@
     <!-- 超链接 -->
     <!-- 第一种写法：站外跳转 -->
     </br>
+    <!-- a标签可以嵌套任何子标签，做为触发跳转的条件 -->
     <a href="https://www.acwing.com"> <img src="/images/logo.png" / width="30">Acwing</a>
     <!-- target：_blank 在新空白页开启页面 -->
     <a href="/second.html" target="_blank">站内跳转</a>
+    <!-- form表单元素 -->
+    <form action="">
+        <!-- label和input是绑定的，for与id是一致的；name是传给后端需要的 -->
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username">
 
+        <br>
+        <label for="age">年龄</label>
+        <input type="number" name="age" id="age">
+        <br>
+        <label for="pwd">密码</label>
+        <input type="password" name="pwd" id="pwd">
+        <br>
+        <label for="email">电子邮件</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <input type="radio" value="cpp">
+        &embp;
+        <input type="radio" name="" id="" value="java">
+    </form>
 
 </body>
 
