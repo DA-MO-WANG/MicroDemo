@@ -102,7 +102,7 @@
     <form action="">
         <!-- label和input是绑定的，for与id是一致的；name是传给后端需要的 -->
         <label for="username">用户名</label>
-        <input type="text" name="username" id="username">
+        <input type="text" maxlength="5" minlength="2" name="username" id="username">
 
         <br>
         <label for="age">年龄</label>
@@ -114,9 +114,10 @@
         <label for="email">电子邮件</label>
         <input type="email" name="email" id="email">
         <br>
-        <input type="radio" value="cpp">
-        &embp;
-        <input type="radio" name="" id="" value="java">
+        <label for="cpp">cpp</label>
+        <input type="radio" name="lang" id="cpp">
+        <label for="java">java</label>
+        <input type="radio" name="lang" id="java">
     </form>
 
 </body>
