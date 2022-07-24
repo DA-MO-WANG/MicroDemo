@@ -99,6 +99,7 @@
     <!-- target：_blank 在新空白页开启页面 -->
     <a href="/second.html" target="_blank">站内跳转</a>
     <!-- form表单元素 -->
+    <!-- action是form表单提交到的跳转地方 -->
     <form action="/second.html">
         <!-- label和input是绑定的，for与id是一致的；name是传给后端需要的 -->
         <!-- 属性：maxlength\required\placeholder -->
@@ -120,7 +121,15 @@
         <input type="radio" name="lang" id="cpp">
         <label for="java">java</label>
         <input type="radio" name="lang" id="java">
-
+        <br>
+        <!-- row\col初始的大小调节 -->
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="language"></label>
+        <section name="language" id=language>
+            <option value="cpp">cpp</option>
+            <option value="java">java</option>
+        </section>
         <br>
         <button type="submit">提交</button>
     </form>
