@@ -51,8 +51,8 @@ public class Main {
         String res = "null";
         JSONObject json = null;
         try {
-            //res = JaxpUtil.toXML(requestObj);
-            res = JSONObject.toJSON(requestObj).toString();
+            res = JaxpUtil.toXML(requestObj);
+            //res = JSONObject.toJSON(requestObj).toString();
             //json = XmlUtils.xml2Json(res);
         } catch (Exception e) {
             e.printStackTrace();
