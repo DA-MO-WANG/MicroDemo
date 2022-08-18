@@ -62,7 +62,12 @@ public class Main {
             System.out.println(res);
         }
 
-
+        try {
+            RequestInfo requestInfo = JaxpUtil.XmlToObject(res, RequestInfo.class);
+            System.out.println(requestInfo.getHeaderr().getChn1());
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
 
     }
 

@@ -1,9 +1,7 @@
 package com.company.javax_xml_bind.util;
 
-import javax.xml.bind.JAXB;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
+import javax.xml.bind.*;
+import java.io.StringReader;
 import java.io.StringWriter;
 
 public class JaxpUtil {
@@ -17,5 +15,12 @@ public class JaxpUtil {
         StringWriter writer = new StringWriter();
         marshaller.marshal(obj,writer);
         return writer.toString();
+    }
+
+    //XML转对象
+    public static <T> T XmlToObject(String xml, Class<T> valueType) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(valueType);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        return (T) unmarshaller.unmarshal(new StringReader(xml));
     }
 }
