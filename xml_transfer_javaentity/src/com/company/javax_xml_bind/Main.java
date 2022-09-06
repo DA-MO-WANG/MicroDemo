@@ -10,17 +10,19 @@ public class Main {
 //        String calendarType = calendar.getCalendarType();
 //        System.out.println(calendarType);
         try {
-            test01();
+            System.out.println(test01());
         }catch (RuntimeException e) {
             System.out.println("1111111");
         }
     }
 
-    private static void test01() {
+    private static String test01() {
         try {
             int a = 5 / 0;
         }catch (RuntimeException e) {
             throw new RuntimeException(e);
-        }fin
+        }finally {
+            return "2222222";
+        }
     }
 }
