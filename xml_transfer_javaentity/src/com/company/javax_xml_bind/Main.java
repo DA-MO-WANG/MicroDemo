@@ -21,6 +21,6 @@ public class Main {
             int a = 5 / 0;
         }catch (RuntimeException e) {
             throw new RuntimeException(e);
-        }
+        }fin
     }
 }
