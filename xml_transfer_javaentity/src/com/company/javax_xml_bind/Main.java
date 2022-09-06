@@ -9,13 +9,18 @@ public class Main {
 //        Calendar calendar = Calendar.getInstance();
 //        String calendarType = calendar.getCalendarType();
 //        System.out.println(calendarType);
-
         try {
-
+            test01();
         }catch (RuntimeException e) {
-            t
+            System.out.println("1111111");
         }
+    }
 
-
+    private static void test01() {
+        try {
+            int a = 5 / 0;
+        }catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
