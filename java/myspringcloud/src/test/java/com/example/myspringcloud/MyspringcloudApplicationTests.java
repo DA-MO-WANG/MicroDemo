@@ -33,7 +33,7 @@ class MyspringcloudApplicationTests {
                 .andExpect(content().string(equalTo("hello")));
     }
     @Test
-    public void hello() throws Exception {
+    public void home() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("hello")));
