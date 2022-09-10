@@ -3,6 +3,7 @@ package com.example.myspringcloud;
 import com.example.myspringcloud.controller.App;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class MyspringcloudApplicationTests {
     private MockMvc mvc;
-    @Before
+    @BeforeEach
     public void setUp() {
         mvc = MockMvcBuilders.standaloneSetup(new App()).build();
     }
