@@ -25,7 +25,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@AutoConfigureMockMvc
 class MyspringcloudApplicationTests {
     private MockMvc mvc;
     @BeforeEach
@@ -34,7 +33,7 @@ class MyspringcloudApplicationTests {
     }
     @Test
     void contextLoads() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get("/app").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("hello")));
     }
