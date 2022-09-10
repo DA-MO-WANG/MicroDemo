@@ -23,8 +23,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration
 class MyspringcloudApplicationTests {
     private MockMvc mvc;
     @BeforeEach
