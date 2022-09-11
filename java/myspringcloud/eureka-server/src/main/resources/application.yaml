@@ -15,8 +15,10 @@ eureka:
     prefer-ip-address: false
   server:
     enableself-preservation: false
-    serviceUrl:
-      defaultZone: http://peer1:1111/eureka/
+  client:
+    register-with-eureka: false
+#    serviceUrl:
+#      defaultZone: http://peer2:1112/eureka/
 
 ---
 #spring:
