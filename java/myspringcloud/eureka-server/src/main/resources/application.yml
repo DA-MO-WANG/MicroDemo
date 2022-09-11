@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: double-eureka
+
+---
+spring:
+  config:
+    activate:
+      on-profile: peer1
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: peer1
+    prefer-ip-address: false
+  client:
+    service-url: http://peer2:1112/eureka/
+
+---
+spring:
+  config:
+    activate:
+      on-profile: peer2
+server:
+  port: 1112
+eureka:
+  instance:
+    hostname: peer2
+    prefer-ip-address: false
+  client:
+    service-url: http://peer1:1111/eureka/
