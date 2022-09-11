@@ -17,8 +17,6 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class ComsumerController {
     @Autowired
-    HelloService helloService;
-    @Autowired
     RestTemplate restTemplate;
     @RequestMapping(value = "/ribbon-consumer",method = RequestMethod.GET)
     public String helloConsumer() {
