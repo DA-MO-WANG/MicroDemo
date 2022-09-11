@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.logging.Logger;
+
 /**
  * @Description TO DO
  * @Classname HelloService
@@ -14,11 +16,17 @@ import org.springframework.web.client.RestTemplate;
  */
 @Service
 public class HelloService {
+    private Logger logger = Logger.getLogger(this.getClass().toString());
     @Autowired
     RestTemplate restTemplate;
     @HystrixCommand(fallbackMethod = "helloFallback")
     public String helloService() {
-        return restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
+        String res = "";
+        long start = System.currentTimeMillis();
+        res =  restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
+        long end = System.currentTimeMillis();
+        logger.info("Spend time: " + (end - start));
+        return res;
     }
     public String helloFallback() {
         return "error";
