@@ -16,17 +16,16 @@ import java.util.logging.Logger;
  */
 @Service
 public class HelloService {
-    private Logger logger = Logger.getLogger(this.getClass().toString());
+    private Logger logger = Logger.getLogger(HelloService.class.toString());
     @Autowired
     RestTemplate restTemplate;
     @HystrixCommand(fallbackMethod = "helloFallback")
     public String helloService() {
-        String res = "";
         long start = System.currentTimeMillis();
-        res =  restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
+        String body = restTemplate.getForEntity("http://HELLO-SERVICE/hello", String.class).getBody();
         long end = System.currentTimeMillis();
         logger.info("Spend time: " + (end - start));
-        return res.toString();
+        return body;
     }
     public String helloFallback() {
         return "error";
