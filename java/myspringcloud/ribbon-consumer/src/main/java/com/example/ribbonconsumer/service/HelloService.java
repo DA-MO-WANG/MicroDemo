@@ -26,7 +26,7 @@ public class HelloService {
         res =  restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
         long end = System.currentTimeMillis();
         logger.info("Spend time: " + (end - start));
-        return res.toString();
+        return restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
     }
     public String helloFallback() {
         return "error";
