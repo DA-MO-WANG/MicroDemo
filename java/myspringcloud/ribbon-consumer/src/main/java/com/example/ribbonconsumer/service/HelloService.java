@@ -19,7 +19,7 @@ public class HelloService {
     private Logger logger = Logger.getLogger(HelloService.class.toString());
     @Autowired
     RestTemplate restTemplate;
-    @HystrixCommand(fallbackMethod = "helloFallback")
+    //@HystrixCommand(fallbackMethod = "helloFallback")
     public String helloService() {
         long start = System.currentTimeMillis();
         String body = restTemplate.getForEntity("http://HELLO-SERVICE/hello", String.class).getBody();
