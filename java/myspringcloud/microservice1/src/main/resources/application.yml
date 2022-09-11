@@ -2,26 +2,9 @@ spring:
   application:
     name: hello-service
 
----
-spring:
-  config:
-    activate:
-      on-profile: service_node1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/
 server:
   port: 8081
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://peer1:1111/eureka/
-
----
-spring:
-  config:
-    activate:
-      on-profile: service_node2
-server:
-  port: 8082
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://peer1:1111/eureka/
