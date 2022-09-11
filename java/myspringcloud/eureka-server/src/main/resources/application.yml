@@ -14,7 +14,8 @@ eureka:
     hostname: peer1
     prefer-ip-address: false
   client:
-    service-url: http://peer2:1112/eureka/
+    serviceUrl:
+      defaultZone: http://peer2:1112/eureka/
 
 ---
 spring:
@@ -28,4 +29,5 @@ eureka:
     hostname: peer2
     prefer-ip-address: false
   client:
-    service-url: http://peer1:1111/eureka/
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/
