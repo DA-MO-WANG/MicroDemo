@@ -26,7 +26,7 @@ public class HelloController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String index() {
-        ServiceInstance instance = client.getInstances("hello-service").get(0);
+        ServiceInstance instance = client.getLocl
         logger.info("/hello, host :" + instance.getHost() + ",service_id:" + instance.getServiceId());
         return "Hello World";
     }
