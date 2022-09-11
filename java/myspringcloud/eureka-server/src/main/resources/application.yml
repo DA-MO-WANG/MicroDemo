@@ -20,18 +20,18 @@ eureka:
       defaultZone: http://peer2:1112/eureka/
 
 ---
-spring:
-  config:
-    activate:
-      on-profile: peer2
-server:
-  port: 1112
-eureka:
-  instance:
-    hostname: peer2
-    prefer-ip-address: false
-  server:
-    enableself-preservation: false
-  client:
-    serviceUrl:
-      defaultZone: http://peer1:1111/eureka/
+#spring:
+#  config:
+#    activate:
+#      on-profile: peer2
+#server:
+#  port: 1112
+#eureka:
+#  instance:
+#    hostname: peer2
+#    prefer-ip-address: false
+#  server:
+#    enableself-preservation: false
+#  client:
+#    serviceUrl:
+#      defaultZone: http://peer1:1111/eureka/
