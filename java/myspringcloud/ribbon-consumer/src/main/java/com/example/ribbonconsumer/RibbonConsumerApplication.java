@@ -9,8 +9,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication
 @EnableDiscoveryClient
+@SpringBootApplication
 @EnableCircuitBreaker
 public class RibbonConsumerApplication {
     @Bean
