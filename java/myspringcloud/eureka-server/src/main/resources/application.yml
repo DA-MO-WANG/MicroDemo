@@ -17,6 +17,7 @@ eureka:
     enableself-preservation: false
   client:
     register-with-eureka: false
+    #指明注册中心，默认端口号
     serviceUrl:
       defaultZone: http://peer1:1111/eureka/
 
