@@ -1,12 +1,12 @@
-#spring:
-#  application:
-#    name: double-eureka
+spring:
+  application:
+    name: double-eureka
 
-#---
-#spring:
-#  config:
-#    activate:
-#      on-profile: peer1
+---
+spring:
+  config:
+    activate:
+      on-profile: peer1
 server:
   port: 1111
 eureka:
