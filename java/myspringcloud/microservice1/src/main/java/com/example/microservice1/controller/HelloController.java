@@ -27,7 +27,7 @@ public class HelloController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String index() throws InterruptedException {
-        ServiceInstance instance = client.getInstances("hello-service").get(0);
+        ServiceInstance instance = client.getInstances("HELLO-SERVICE").get(0);
 //        int sleepTime = new Random().nextInt(100);
 //        logger.info("sleepTime:" + sleepTime);
 //        Thread.sleep(sleepTime);
