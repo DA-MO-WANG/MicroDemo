@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3ddcbf39-cbfb-4f5e-8d0c-2b817b287025" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../java-design-patterns" beforeDir="false" afterPath="$PROJECT_DIR$/../java-design-patterns" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xml_excel" beforeDir="false" afterPath="$PROJECT_DIR$/../xml_excel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
       <updated>1648535963268</updated>
       <workItem from="1648535964596" duration="391000" />
       <workItem from="1650360565972" duration="8000" />
+      <workItem from="1663565626479" duration="30000" />
     </task>
     <servers />
   </component>
