@@ -1,5 +1,5 @@
 fn main() {
-  let name = 3;
-  let name = 4;
+  let mut name = 3;
+  name = 4;
   print!("name参数值为{}", name);
 }
