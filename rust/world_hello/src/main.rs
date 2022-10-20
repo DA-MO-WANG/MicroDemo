@@ -25,10 +25,14 @@ fn fair_dice_roll3() -> i32 {
     }
 }
 
-fn fair_dice_roll() -> i32 {
+fn fair_dice_roll5() -> i32 {
     let x = true;
     match x {
         true => 6,
         false => 4,
     }
+}
+fn fair_dice_roll() -> i32 {
+    let nick = "232323232";
+    nick.len();
 }
