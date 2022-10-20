@@ -6,7 +6,7 @@ fn main() {
     // }
     // println!("{}", x);
     let res = fair_dice_roll();
-    println!(res);
+    println!("{}", res);
 }
 
 fn fair_dice_roll() -> i32 {
