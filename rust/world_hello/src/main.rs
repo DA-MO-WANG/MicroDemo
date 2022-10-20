@@ -32,7 +32,8 @@ fn fair_dice_roll5() -> i32 {
         false => 4,
     }
 }
-fn fair_dice_roll() -> i32 {
+fn fair_dice_roll() -> usize {
     let nick = "232323232";
-    nick.len();
+    let res = nick.len();
+    return res;
 }
