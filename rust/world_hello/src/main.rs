@@ -13,6 +13,14 @@ fn fair_dice_roll1() -> i32 {
     return 4;
 }
 
-fn fair_dice_roll() -> i32 {
+fn fair_dice_roll2() -> i32 {
     4
+}
+fn fair_dice_roll() -> i32 {
+    let feeling_lucky = true;
+    if feeling_lucky {
+        6
+    } else {
+        4
+    }
 }
