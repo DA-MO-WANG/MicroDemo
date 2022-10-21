@@ -148,6 +148,34 @@ fn rust_code14() {
     n.odd = false;
 }
 
+//类似接口
+//接口聚合某些性质,不带具体实现
+//接口会绑定在某些结构上
+trait Signed {
+    fn is_strictly_negative(self) -> bool;
+}
+
+//绑定时，顺便指定具体实现
+impl Signed for Number {
+    fn is_strictly_negative(self) -> bool {
+        self.value < 0
+    }
+}
+
+impl std::ops::Neg for Number {
+    type Output = Number;
+    fn neg(self) -> Number {
+        Number {
+            value: -self.value,
+            odd: self.odd,
+        }
+    }
+}
+fn rust_code15() {
+    let n = Number {odd: true, value: 987};
+    let m = -n;
+    println!("{}",m.value);
+}
 
 
 
