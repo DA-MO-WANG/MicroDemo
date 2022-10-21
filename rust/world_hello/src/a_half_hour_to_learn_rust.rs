@@ -66,6 +66,70 @@ fn rust_code9 {
         y + z
     }
 }
+//match 类似switch case
+fn rust_code10() -> i32 {
+    match true {
+        true => 6,
+        false => 4,
+    }
+}
+fn rust_code11() {
+    //类似import 倒入某些第三方文件
+    //命名空间-std::cmp::min
+    //std->library
+    //cmp->module
+    //min->function
+}
+//结构体
+//声明名字和类型
+struct Vec2 {
+    x: f64,
+    y: f64,
+}
+
+fn rust_code12() {
+    let v3 = Vec2 {
+        x: 14.0,
+        ..v2
+    }
+
+    let v4 = Vec2 {..v3 };
+}
+//类似类结构
+struct Number {
+    odd: bool,
+    value: i32,
+}
+
+fn main() {
+    let one = Number {odd: true, value: 1};
+    let two = Number {odd: false, value: 2};
+    print_number(one);
+    print_number(two);
+}
+
+//结构体作为某种pattern,pattern 作为判断条件
+//
+fn print_number(n: Number) {
+    if let Number {odd: true, value } = n {
+        println!("Odd number: {}",value);
+    } else if let Number {odd: false, value } = n {
+        println!("Even number: {}", value);
+    }
+}
+
+fn rust_code13() {
+    match n {
+        Number { odd: true, value } => println!("Odd number: {}", value),
+        Number { odd: false, value } => println!("Even number: {}", value),
+    }
+}
+
+
+
+
+
+
 
 
 
