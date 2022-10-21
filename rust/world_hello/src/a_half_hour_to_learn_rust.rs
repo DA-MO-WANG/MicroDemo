@@ -125,6 +125,21 @@ fn rust_code13() {
     }
 }
 
+struct Number {
+    odd: bool,
+    value: i32,
+}
+
+//给结构体添加一个内置方法，绑定了这个结构的性质函数
+//比如这里判断正负性
+impl Number {
+    fn is_strictly_positive(self) -> bool {
+        self.value > 0
+    }
+}
+
+
+
 
 
 
