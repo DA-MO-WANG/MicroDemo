@@ -138,7 +138,15 @@ impl Number {
     }
 }
 
-
+fn rust_code14() {
+    //rust 中默认 let 定义的变量不可变
+    //需要可变设计时，添加相应的关键字 mut
+    let n = Number {
+        odd: true,
+        value: 17,
+    };
+    n.odd = false;
+}
 
 
 
