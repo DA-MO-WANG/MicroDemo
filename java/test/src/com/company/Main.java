@@ -17,9 +17,10 @@ public class Main {
         do{
             //截留住0.之后的部分，包括点在内
             String sub = format.substring(format.length() - count);
+            System.out.println(sub);
             if(sub.equals(".")) break;
             temp = Integer.valueOf(sub);
-            System.out.println(temp);
+
             count++;
         }while (temp <= 0);
         //String doubleV = format.substring(0,format.length() - count + 2);
