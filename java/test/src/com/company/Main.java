@@ -14,18 +14,21 @@ public class Main {
         //要求业务上的最高精确度-这里是小数点后8位精确
         DecimalFormat d = new DecimalFormat("#,##0.00000000");
         String format = d.format(x);
+        // do while的过程就是倒着开始截取，直到找到倒数第一个有效位（非0位）
         do{
             //截留住0.之后的部分，包括点在内
+            //count是截取逐步试探
             String sub = format.substring(format.length() - count);
-            System.out.println(sub);
             if(sub.equals(".")) break;
             temp = Integer.valueOf(sub);
-
             count++;
+            //temp 来标志是否找到
         }while (temp <= 0);
-        //String doubleV = format.substring(0,format.length() - count + 2);
+        System.out.println(count);
+        //找到了这个位置才谈得上，舍去后半对数值无意义的部分
+        String doubleV = format.substring(0,format.length() - count + 2);
 
 
-        //System.out.println(doubleV);
+        System.out.println(doubleV);
     }
 }
