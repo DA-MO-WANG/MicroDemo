@@ -27,6 +27,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,6 +42,7 @@
       <workItem from="1648535964596" duration="391000" />
       <workItem from="1650360565972" duration="8000" />
       <workItem from="1663565626479" duration="30000" />
+      <workItem from="1668419989289" duration="160000" />
     </task>
     <servers />
   </component>
