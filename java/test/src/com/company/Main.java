@@ -15,6 +15,7 @@ public class Main {
         DecimalFormat d = new DecimalFormat("#,##0.00000000");
         String format = d.format(x);
         // do while的过程就是倒着开始截取，直到找到倒数第一个有效位（非0位）
+        System.out.println(format);
         do{
             //截留住0.之后的部分，包括点在内
             //count是截取逐步试探
