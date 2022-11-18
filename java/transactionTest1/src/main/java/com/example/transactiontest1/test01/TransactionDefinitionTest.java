@@ -40,7 +40,7 @@ public class TransactionDefinitionTest {
         }
     };
 
-    @Transactional(PROPAGATION_REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRED)
     public void getABC() {
 
     }
