@@ -1,6 +1,9 @@
 package com.example.transactiontest1.test01;
 
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Description TO DO
@@ -36,5 +39,11 @@ public class TransactionDefinitionTest {
             return TransactionDefinition.super.getName();
         }
     };
+
+    @Transactional(PROPAGATION_REQUIRED)
+    public void getABC() {
+
+    }
+
 
 }
