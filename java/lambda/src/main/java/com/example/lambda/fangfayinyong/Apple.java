@@ -1,4 +1,4 @@
-package chapter03;
+package com.example.lambda.version1;
 
 public class Apple {
 
