@@ -1,4 +1,4 @@
-package version1;
+import version4.Singleton;
 
 import java.util.stream.LongStream;
 
@@ -14,6 +14,9 @@ public class Test {
        // Singleton singleton = Singleton.getInstance();
         LongStream.rangeClosed(1,1000)
                 .parallel()
-                .forEach(i -> Singleton.getInstance());
+                .forEach(i -> Singleton.getInstance().sayHello());
+
+        version5.Singleton singleton = version5.Singleton.SINGLETON;
+
     }
 }
